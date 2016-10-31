@@ -26,7 +26,7 @@ body {
 }
 h1 {
     text-align: center;
-    font-size: 56px;
+    font-size: 40px;
     color: white;
     margin: 20px auto;
     font-family: 'Mario';
@@ -164,7 +164,11 @@ a {
     border: none;
 }
 
-
+/* HOME PAGE */
+#home-page {
+  background-color: black;
+  height: 1000px;
+}
 /* INDEX PAGE */
 #index {
   background-image: url('https://../assets/images5.alphacoders.com/490/490259.jpg');
@@ -282,19 +286,19 @@ button:focus {
   margin: auto;
 }
 .free td {
-  width: 420px;
+  width: 300px;
 }
 .twov {
   margin: auto;
 }
 .twov td {
-  width: 420px;
+  width: 300px;
 }
 .auto {
   margin: auto;
 }
 .auto th {
-  width: 420px;
+  width: 300px;
 }
 .game-list {
     float: left;
