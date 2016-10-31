@@ -20,6 +20,9 @@
   - Slot Machine
   - Page transitions
 
+- Create "New Game" function
+
+- Store counter info in table
 
 
 ## Completed -----
