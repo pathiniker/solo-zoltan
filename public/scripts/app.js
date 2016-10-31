@@ -140,8 +140,7 @@ $('#reset').click(function() {
 $('#spin').click(function() {
     if (playCount == 0) {
       alert('Insert coin to play!');
-
-
+      
     } else if (playCount >= 1){
     playCount--;
     $('#yahtzeeWin').text('');
