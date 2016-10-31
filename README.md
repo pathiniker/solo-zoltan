@@ -29,17 +29,13 @@
 
 
 ## Completed -----
-- Convert to server format
-  - (10/31)
+- Convert to server format [10/31]
 
-- Reorganize everything into folders
-  - (10/31)
+- Reorganize everything into folders [10/31]
 
-- Convert site to Angular Routing format
-  - (10/31)
+- Convert site to Angular Routing format [10/31]
 
-- Create static footer
+- Create static footer [10/31]
   - Contains:
     - Index pages
     - Counter table
-  - (10/31)
