@@ -15,6 +15,9 @@
   - Create separate styling pages?
   - 40%
 
+- Background music
+  - Change song from footer
+
 ## Stretch -----
 - Create animations
   - Slot Machine

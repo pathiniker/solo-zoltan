@@ -13,13 +13,14 @@
     <script src="scripts/app.module.js" charset="utf-8"></script>
     <script src="scripts/app.config.js" charset="utf-8"></script>
 
+    <!-- <link rel="stylesheet" href="vendors/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="styles/style.css">
 
     <base href="/" />
 </head>
 
 <body>
-  
+
 <ng-view></ng-view>
 
 <div class="static">
@@ -36,6 +37,7 @@
   <li id="game"><a href="/game">Mini Game</a></li>
   <li id="casino"><a href="/casino">Casino</a></li>
   <li id="bowser"><a href="/bowser">Bowser</a></li>
+  <li>Pat Hiniker 2016</li>
 </ul>
   </div>
 
@@ -94,7 +96,20 @@
     <td><button class="counterbutton" id="star-four"><span id="star-four"></span></button></td>
   </tr>
 </table>
+
+<!-- <ul>
+  <li><button class="song" id="pause-song">Pause Music</button></li>
+  <li><button class="song" id="change-song">Next Song</button></li>
+</ul> -->
+
+<div id="current-turn">
+  <img src="../assets/images/yoshi.png" />
+  <!-- <p>Current Turn</p> -->
+</div>
+
+
   </div> <!-- end COUNTER BOX -->
+
 
 
 </div> <!-- end STATIC -->
