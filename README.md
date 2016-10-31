@@ -30,15 +30,16 @@
 
 ## Completed -----
 - Convert to server format
-  - Complete by Tuesday
+  - (10/31)
 
 - Reorganize everything into folders
+  - (10/31)
 
 - Convert site to Angular Routing format
-  - Complete by Wednesday
+  - (10/31)
 
-- Create static footer (completed 10/31)
+- Create static footer
   - Contains:
     - Index pages
     - Counter table
-  - Complete by Tuesday
+  - (10/31)
