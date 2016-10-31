@@ -188,7 +188,7 @@ $('#spin').click(function() {
     if ((yahtzeeSpinOne == yahtzeeSpinTwo && yahtzeeSpinOne == yahtzeeSpinThree) && ((yahtzeeSpinOne + yahtzeeSpinTwo + yahtzeeSpinThree) == 3)) {
 
       // $('#yahtzeeWin').text('Winner!');
-      $('#yahtzeeWin').append('<audio src="audio/airhorn.mp3" autoplay></audio>');
+      $('#yahtzeeWin').append('<audio src="..assets/audio/airhorn.mp3" autoplay></audio>');
       playCount = 0;
       $('#slot-count').text(playCount);
       payout = payout + lowWin;
@@ -200,7 +200,7 @@ $('#spin').click(function() {
     } else if ((yahtzeeSpinOne == yahtzeeSpinTwo && yahtzeeSpinOne == yahtzeeSpinThree) && ((yahtzeeSpinOne + yahtzeeSpinTwo + yahtzeeSpinThree) == 6)) {
 
         // $('#yahtzeeWin').text('Winner!');
-        $('#yahtzeeWin').append('<audio src="audio/airhorn.mp3" autoplay></audio>');
+        $('#yahtzeeWin').append('<audio src="..assets/audio/airhorn.mp3" autoplay></audio>');
         playCount = 0;
         $('#slot-count').text(playCount);
         payout = payout + regWin;
@@ -210,7 +210,7 @@ $('#spin').click(function() {
         // $('.siren').fadeTo(fast, 0.5).;
 
     } else if ((yahtzeeSpinOne + yahtzeeSpinTwo + yahtzeeSpinThree) == 9) {
-      $('#yahtzeeWin').append('<audio src="audio/cena.mp3" autoplay></audio>');
+      $('#yahtzeeWin').append('<audio src="..assets/audio/cena.mp3" autoplay></audio>');
       playCount = 0;
       $('#slot-count').text(playCount);
       payout = payout + jackpot;
