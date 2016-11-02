@@ -1,4 +1,4 @@
-/* GENERAL */
+/* ------------------- GENERAL ------------------- */
 @font-face { font-family: 'Mario'; src: url('../assets/fonts/mario.ttf'); }
 @font-face { font-family: 'Balls'; src: url('../assets/fonts/balls.ttf'); }
 @keyframes blinker {
@@ -9,7 +9,9 @@ html {
   box-sizing: border-box;
 }
 .content {
-  height: 100%;
+  padding-bottom: 500px;
+  width: 100%;
+  float: left;
 }
 *,
 *:before,
@@ -19,7 +21,7 @@ html {
 body {
     position: relative;
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 100px;
     min-height: 100%;
     font-family: "Trebuchet MS";
     background-color: #42b3f4;
@@ -28,8 +30,9 @@ h1 {
     text-align: center;
     font-size: 40px;
     color: white;
-    margin: 20px auto;
+    margin: 20px auto auto -250px;
     font-family: 'Mario';
+    padding-top: 200px;
 }
 h2 {
     text-align: center;
@@ -46,6 +49,16 @@ h4 {
     font-size: 26px;
     text-align: center;
     background-color: pink;
+}
+h5 {
+  text-align: center;
+  font-family: 'Mario';
+  background-color: lightgrey;
+  margin: 0;
+}
+h6 {
+  font-family: 'Mario';
+  display: inline;
 }
 p {
   color: black;
@@ -79,8 +92,9 @@ a:focus {
     margin-right: 50px;
     float: left;
 }
+
 #backbutton {
-  background-image: url(../assets/images/block2.png);
+  background-image: url('../assets/images/block2.png');
   background-size: contain;
   width: 80px;
   height: 80px;
@@ -89,7 +103,7 @@ a:focus {
   margin-top: 15px;
 }
 
-/* STATIC */
+/* ------------------- STATIC ------------------- */
 .static {
   position: fixed;
   right: 0;
@@ -100,7 +114,7 @@ a:focus {
   height: 170px;
   border-top: 5px outset;
 }
-/* PAGES */
+/* ------------------- PAGES ------------------- */
 #pages-box {
   width: 33%;
   background-color: #74fcbc;
@@ -126,7 +140,7 @@ a:focus {
 }
 
 
-/* COUNTER */
+/* ------------------- COUNTER ------------------- */
 #counter-box {
   width: 67%;
   background-color: #2dad71;
@@ -171,7 +185,25 @@ a:focus {
     text-align: center;
     border: none;
 }
-/* SONG */
+#turn-counter {
+  float: left;
+  padding-left: 30px;
+}
+#game-turn {
+  width: 150px;
+  height: 100px;
+  background-color: white;
+  border: 3px inset;
+}
+#next-player {
+  width: 150px;
+  height: 40px;
+  border: 3px outset;
+  background-color: skyblue;
+  font-family: 'Mario';
+  font-size: 9px;
+}
+/* ------------------- SONG  ------------------- */
 .song {
   height: 50%;
   width: 100px;
@@ -184,7 +216,7 @@ a:focus {
   background-color: red;
 }
 
-/* CURRENT TURN */
+/* ------------------- CURRENT TURN ------------------- */
 #current-turn {
   height: 100%;
   width: 150px;
@@ -203,12 +235,80 @@ a:focus {
   display: inline-block;
 }
 
-/* HOME PAGE */
+/* ------------------- HOME PAGE ------------------- */
 #home-page {
-  background-color: black;
-  height: 1000px;
+  height: 800px;
+  background-image: url('../assets/images/warp.jpg');
+  background-size: cover;
+  margin-top: -20px;
 }
-/* INDEX PAGE */
+#new-game {
+  margin: 50px auto auto 300px;
+  font-family: 'Mario';
+  width: 300px;
+  height: 100px;
+  border-radius: 15px;
+  border: 5px outset;
+  background-color: lightblue;
+  font-size: 20px;
+}
+
+/* ------------------- NEW GAME ------------------- */
+#newgame-page {
+  background-color: lightblue;
+}
+#newgame-page form {
+  background-color: white;
+  margin-top: 10px;
+}
+#char-select {
+  margin: 30px auto;
+  width: 60%;
+  text-align: center;
+  background-color: blanchedalmond;
+  padding: 10px 20px;
+  border: 5px inset;
+  border-radius: 15px;
+}
+#startgame {
+  width: 50%;
+  height: 50px;
+  border-radius: 15px;
+  border: 5px outset;
+  margin: 15px;
+  background-color: lightgreen;
+  font-family: 'Mario';
+}
+#char-select a {
+  display: block;
+}
+#char-select input {
+  margin: auto 30px;
+}
+
+/* ------------------- PLAYERS PAGE --------------------- */
+#players-page {
+  background-color: lightgreen;
+}
+#player-display {
+  height: 300px;
+  width: 20%;
+  float: left;
+  background-color: lightblue;
+  margin: 15px;
+  border: 5px inset;
+  border-radius: 15px;
+}
+#player-display img {
+  height: 200px;
+}
+#all-players {
+  margin: auto;
+}
+
+
+
+/* ------------------- INDEX PAGE --------------------- */
 #index {
   background-image: url('https://../assets/images5.alphacoders.com/490/490259.jpg');
   background-size: cover;
@@ -264,7 +364,7 @@ a:focus {
 }
 
 
-/* COUNTER PAGE */
+/* ------------------- COUNTER PAGE ------------------- */
 
 #namesize {
   font-size: 10px;
@@ -299,7 +399,7 @@ button:focus {
 }
 
 
-/* GREEN PAGE */
+/* ------------------- GREEN PAGE ------------------- */
 #green-page {
   background-color: #6aed65;
 }
@@ -320,7 +420,7 @@ button:focus {
 
 
 
-/* MINI GAME PAGE */
+/* ------------------- MINI GAME PAGE ------------------- */
 .free {
   margin: auto;
 }
@@ -369,23 +469,38 @@ button:focus {
 
 
 
-/* CANDY PAGE */
+/* ------------------- CANDY PAGE ------------------- */
 #candy-page {
   background-color: #9188f7;
 }
 #candy-col-1 {
   width: 25%;
-  float: right;
+  float: left;
+}
+#candy-col-1 img {
+  height: 400px;
+  margin: 90px auto auto 50px;
 }
 #candy-col-2 {
   width: 20%;
-  display: inline;
+  float: left;
+  margin: 80px auto auto auto;
 }
 #candy-col-3 {
   width: 55%;
-  display: inline;
+  float: left;
+  margin-top: 120px;
+  padding-left: 100px;
 }
-
+.candies img {
+  height: 30px;
+}
+#candy-descrip {
+  width: 300px;
+}
+#candy-cost {
+  width: 100px;
+}
 #choose-candy {
   background-color: white;
   padding: 15px 10px;
@@ -453,18 +568,33 @@ button:focus {
 
 
 
-/* RULES PAGE */
+/* ------------------- RULES PAGE ------------------- */
 .rules {
-    float: left;
-    padding-left: 30px;
+    margin: auto;
+    float: right;
+}
+.rule-col-1 {
+  float: left;
+  width: 30%;
+  padding: 30px;
+}
+.rule-col-2 {
+  float: left;
+  width: 70%;
+}
+#rule-subcol-1 {
+  float: left;
+  margin-left: 100px;
+}
+#rule-subcol-2 {
+  float: left;
+  margin-left: 100px;
 }
 #ruleDescrip {
-    margin-left: 50px;
     max-width: 350px;
     border: 2px inset;
     padding: 15px;
     background-color: white;
-    margin: 40px;
 }
 #blue {
   background-color: #3e66dd;
@@ -499,10 +629,13 @@ button:focus {
 #button-text {
   font-size: 24px;
 }
+#ruleDescrip ul {
+  float: none;
+}
 
 
 
-/* CASINO PAGE */
+/* ------------------- CASINO PAGE ------------------- */
 .yahtzeeWin {
   position: fixed;
   float: right;
@@ -598,16 +731,20 @@ th {
 }
 #yoshi {
   float: left;
-  margin: 5px 80px auto 50px;
+  margin: 100px 40px auto 80px;
 }
 
-/* Bowser Page */
+/* ------------------- BOWSER PAGE ------------------- */
 #bowser-page {
-  background-color: #701a1a;
+  background: linear-gradient(#701a1a, black);
 }
 #b-left {
   width: 30%;
   float: left;
+}
+#b-left img {
+  margin: 30px auto auto 20px;
+  height: 500px;
 }
 #b-right {
   width: 70%;
@@ -615,22 +752,24 @@ th {
 }
 #bowser-table {
   margin: auto;
+  margin-top: 50px;
   background: linear-gradient(gray, black);
-  padding: 50px;
+  padding: 50px 50px;
   border: 5px inset;
+  width: 550px;
 
 }
 #bowser-table td{
-  width: 100px;
-  height: 150px;
+  min-width: 200px;
+  height: 200px;
   color: red;
   border: 10px inset;
   background: linear-gradient(gray, white, gray);
 }
 
 #bowser-button {
-  margin-left: 170px;
-  width: 550px;
+  margin-left: 90px;
+  width: 720px;
   height: 60px;
   background-color: black;
   color: white;
@@ -641,5 +780,14 @@ th {
 }
 .b-spin {
   font-family: 'Mario';
-  font-size: 30px;
+  font-size: 45px;
+}
+#quantity img {
+  height: 60px;
+}
+#give-take img {
+  height: 90px;
+}
+#trader img {
+  height: 120px;
 }

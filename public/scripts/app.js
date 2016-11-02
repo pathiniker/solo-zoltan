@@ -140,7 +140,7 @@ $('#reset').click(function() {
 $('#spin').click(function() {
     if (playCount == 0) {
       alert('Insert coin to play!');
-      
+
     } else if (playCount >= 1){
     playCount--;
     $('#yahtzeeWin').text('');
@@ -698,18 +698,18 @@ $('.b-spin').empty();
 
   /// giveTake
   if (giveTake == 1) {
-    $('#give-take').append('<img src="../assets/images/backward.png" height="50px">');
+    $('#give-take').append('<img src="../assets/images/backward.png">');
   } else if (giveTake == 2) {
-    $('#give-take').append('<img src="../assets/images/forward.png" height="50px">');
+    $('#give-take').append('<img src="../assets/images/forward.png">');
   };
 
   /// quantity
   if (quantity == 1){
-    $('#quantity').append('<img src="../assets/images/coin.png" height="40px">');
+    $('#quantity').append('<img src="../assets/images/coin.png">');
   } else if (quantity == 2){
-    $('#quantity').append('<img src="../assets/images/coin.png" height="40px"><img src="../assets/images/coin.png" height="40px">');
+    $('#quantity').append('<img src="../assets/images/coin.png"><img src="../assets/images/coin.png">');
   } else if (quantity == 3){
-    $('#quantity').append('<img src="../assets/images/coin.png" height="40px"><img src="../assets/images/coin.png" height="40px"><img src="../assets/images/coin.png" height="40px">');
+    $('#quantity').append('<img src="../assets/images/coin.png"><img src="../assets/images/coin.png"><img src="../assets/images/coin.png">');
   };
 
   /// trader
@@ -722,7 +722,7 @@ $('.b-spin').empty();
   } else if (trader == 4) {
     $('#trader').text('P4');
   } else if (trader == 5) {
-    $('#trader').append('<img src="http://orig11.deviantart.net/5a26/f/2016/081/2/c/bowser_head_smash_bros__series_icon_by_mrthatkidalex24-d9w2gbb.png" height="50px">');
+    $('#trader').append('<img src="http://orig11.deviantart.net/5a26/f/2016/081/2/c/bowser_head_smash_bros__series_icon_by_mrthatkidalex24-d9w2gbb.png">');
   };
 
 

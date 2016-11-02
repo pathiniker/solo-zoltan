@@ -49,3 +49,21 @@
   - Contains:
     - Index pages
     - Counter table
+
+
+## Log ------------
+- [Mon 10/31]
+  - Built server and new directory
+  - Made into Angular routes
+  - Made index and counter into static footer
+
+- [Tues 11/1]
+  - Wrote and submitted scope document
+  - Fixed background issue
+  - Cleaned up most pages styling issues
+
+- [Wed 11/2]
+  - Create New Game feature
+  - Added 'Character Select' page
+  - Created SQL table to store player data
+  - Added 'players.js' route to server

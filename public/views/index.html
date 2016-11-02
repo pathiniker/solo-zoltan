@@ -12,6 +12,7 @@
 
     <script src="scripts/app.module.js" charset="utf-8"></script>
     <script src="scripts/app.config.js" charset="utf-8"></script>
+    <script src="scripts/player.controller.js"></script>
 
     <!-- <link rel="stylesheet" href="vendors/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="styles/style.css">
@@ -20,6 +21,7 @@
 </head>
 
 <body>
+<!-- <body ng-controller="PlayerController as player"> -->
 
 <ng-view></ng-view>
 
@@ -28,16 +30,18 @@
 
 <ul class="page-list">
   <li id=""><a href="/home">Home</a></li>
+  <li id="players"><a href="/playerspage">Players</a></li>
   <li id="rules"><a href="/rules">Rules</a></li>
-  <li id="green"><a href="/green">Green</a></li>
-  <li id="candy"><a href="/candy">Candy</a></li>
+  <li id="game"><a href="/game">Mini Game</a></li>
+
 </ul>
 
 <ul class="page-list">
-  <li id="game"><a href="/game">Mini Game</a></li>
+  <li id="green"><a href="/green">Green</a></li>
+  <li id="candy"><a href="/candy">Candy</a></li>
   <li id="casino"><a href="/casino">Casino</a></li>
   <li id="bowser"><a href="/bowser">Bowser</a></li>
-  <li>Pat Hiniker 2016</li>
+
 </ul>
   </div>
 
@@ -57,7 +61,7 @@
   </tr>
   <tr>
     <td>P1</td>
-    <td><input type="text" /></td>
+    <td>{{ player }}</td>
     <td><button class="counterbutton" id="red-one"><span id="red-one"></span></button></td>
     <td><button class="counterbutton" id="green-one"><span id="green-one"></span></button></td>
     <td><button class="counterbutton" id="mini-one"><span id="mini-one"></span></button></td>
@@ -67,7 +71,7 @@
   </tr>
   <tr>
     <td>P2</td>
-    <td><input type="text" /></td>
+    <td>{{ player }}</td>
     <td><button class="counterbutton" id="red-two"><span id="red-two"></span></button></td>
     <td><button class="counterbutton" id="green-two"><span id="green-two"></span></button></td>
     <td><button class="counterbutton" id="mini-two"><span id="mini-two"></span></button></td>
@@ -77,7 +81,7 @@
   </tr>
   <tr>
     <td>P3</td>
-    <td><input type="text" /></td>
+    <td>{{ player }}</td>
     <td><button class="counterbutton" id="red-three"><span id="red-three"></span></button></td>
     <td><button class="counterbutton" id="green-three"><span id="green-three"></span></button></td>
     <td><button class="counterbutton" id="mini-three"><span id="mini-three"></span></button></td>
@@ -87,7 +91,7 @@
   </tr>
   <tr>
     <td>P4</td>
-    <td><input type="text" /></td>
+    <td>{{ player }}</td>
     <td><button class="counterbutton" id="red-four"><span id="red-four"></span></button></td>
     <td><button class="counterbutton" id="green-four"><span id="green-four"></span></button></td>
     <td><button class="counterbutton" id="mini-four"><span id="mini-four"></span></button></td>
@@ -97,10 +101,41 @@
   </tr>
 </table>
 
-<!-- <ul>
-  <li><button class="song" id="pause-song">Pause Music</button></li>
-  <li><button class="song" id="change-song">Next Song</button></li>
-</ul> -->
+
+
+
+
+
+
+<!-- <table>
+  <tr>
+    <th></th>
+    <th>Name</th>
+    <th id="red-th"></th>
+    <th id="green-th"></th>
+    <th><img src="../assets/images/sword.png" /></th>
+    <th><img src="../assets/images/candy.png" /></th>
+    <th><img src="../assets/images/coin.png" /></th>
+    <th><img src="../assets/images/star.png" /></th>
+  </tr>
+  <tr ng-repeat="">
+    <td> {{ players.id }}</td>
+    <td>{{ players.name }}</td>
+    <td>{{ players.red }}</td>
+    <td>{{ players.green }}</td>
+    <td>{{ players.minigame }}</td>
+    <td>{{ players.candy }}</td>
+    <td>{{ players.coins }}</td>
+    <td>{{ players.stars }}</td>
+  </tr>
+</table> -->
+
+
+
+<div id="turn-counter">
+  <p id="game-turn">Turn:<span id="current-game-turn"></span></p>
+  <button id="next-player">Next player</button>
+</div>
 
 <div id="current-turn">
   <img src="../assets/images/yoshi.png" />

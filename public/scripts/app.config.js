@@ -14,6 +14,11 @@ angular.module('routeApp')
             templateUrl: 'views/casino.html',
           }).when('/bowser', {
             templateUrl: 'views/bowser.html',
+          }).when('/newgame', {
+            templateUrl: 'views/newgame.html',
+            controller: 'PlayerController as player',
+          }).when('/playerspage', {
+            templateUrl: 'views/playerspage.html',
           }).otherwise({
             redirectTo: '/home',
           });
