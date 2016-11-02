@@ -285,6 +285,14 @@ a:focus {
 #char-select input {
   margin: auto 30px;
 }
+#char-forms {
+  width: 80%;
+  border: 2px inset;
+  border-radius: 15px;
+  margin: auto;
+  padding: 15px;
+  background-color: tomato;
+}
 
 /* ------------------- PLAYERS PAGE --------------------- */
 #players-page {

@@ -5,6 +5,13 @@ function PlayerController($http){
   var player = this;
   console.log('PlayerController loaded');
 
+player.mario = '../assets/images/mario.png';
+player.luigi = '../assets/images/luigi.png';
+player.peach = '../assets/images/peach.png';
+player.toad = '../assets/images/toad.png';
+player.koopa = '../assets/images/koopa.png';
+
+
   player.playersArray = [];
   player.player = {};
 
@@ -26,9 +33,10 @@ function PlayerController($http){
 
     // });
     console.log(player.playerOne);
-    console.log();
+    console.log(player.playerTwo);
+    console.log(player.playerThree);
+    console.log(player.playerFour);
   };
-
 
 
 
