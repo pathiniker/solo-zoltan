@@ -293,6 +293,7 @@ a:focus {
   padding: 15px;
   background-color: tomato;
 }
+/*select#char-img option[value="mario"] { background-image: url('../assets/images/yoshi.png'); height: 30px;}*/
 
 /* ------------------- PLAYERS PAGE --------------------- */
 #players-page {
