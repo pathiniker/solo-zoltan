@@ -1,21 +1,24 @@
 var app = angular.module('routeApp');
+app.service('playerService', PlayerService);
 
-app.service('player', PlayerService);
-
-function PlayerService($http){
-  this.getPlayers = function(){
-    return $http.get('/players')
-          .then(function(response){
-            return response.data;
-          });
-  };
-};
 
 function PlayerService($http){
-  this.createPlayers = function(){
-    return $http.post('/players')
+
+  this.createPlayer = function(newPlayer){
+    return $http.post('/players', newPlayer)
           .then(function(response){
             return response.data;
-          });
+    });
   };
-};
+
+  this.getPlayers = function(allPlayers){
+    return $http.get('/players', allPlayers)
+          .then(function(response){
+            return response.data;
+
+    });
+  };
+
+
+
+}; // end PlayerService

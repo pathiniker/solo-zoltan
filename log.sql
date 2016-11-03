@@ -11,12 +11,12 @@ Create 'player' table with:
 
 CREATE TABLE player (
 	id SERIAL PRIMARY KEY,
-	name varchar(12),
-	character varchar(255),
-	red int,
-	green int,
-	minigame int,
-	candy int,
-	coins int,
-	stars int
+	name varchar(12) NOT NULL,
+	character varchar(255) NOT NULL,
+	red int DEFAULT 0,
+	green int DEFAULT 0,
+	minigame int DEFAULT 0,
+	candy int DEFAULT 0,
+	coins int DEFAULT 3,
+	stars int DEFAULT 0
 );

@@ -3,29 +3,32 @@
 <div id="all-players">
 
 
-<div id="player-display">
-<img src="{{ character }}" />
-<p>{{ player }}</p>
+<div class="player-display">
+<img src="{{ player.playersArray[0].character }}" />
+<p>{{ player.playersArray[0].name }}</p>
 <p>P1</p>
 </div>
 
-<div id="player-display">
-<img src="{{ character }}" />
-<p>{{ player }}</p>
+<div class="player-display">
+<img src="{{ player.playersArray[1].character }}" />
+<p>{{ player.playersArray[1].name }}</p>
 <p>P2</p>
 </div>
 
-<div id="player-display">
-<img src="{{ character }}" />
-<p>{{ player }}</p>
+<div class="player-display">
+<img src="{{ player.playersArray[2].character }}" />
+<p>{{ player.playersArray[2].name }}</p>
 <p>P3</p>
 </div>
 
-<div id="player-display">
-<img src="{{ character }}" />
-<p>{{ player }}</p>
+<div class="player-display">
+<img src="{{ player.playersArray[3].character }}" />
+<p>{{ player.playersArray[3].name }}</p>
 <p>P4</p>
 </div>
+
+
+<button id="startgame" ng-click="player.getPlayers()">Show Players</button>
 
 
 

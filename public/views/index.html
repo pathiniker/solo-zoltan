@@ -47,9 +47,11 @@
   </div>
 
 
+<!-- STATIC TABLE -->
 
   <div id="counter-box">
-<table id="counter">
+
+<!-- <table id="counter">
   <tr>
     <th></th>
     <th>Name</th>
@@ -100,18 +102,16 @@
     <td><button class="counterbutton" id="coin-four"><span id="coin-four"></span></button></td>
     <td><button class="counterbutton" id="star-four"><span id="star-four"></span></button></td>
   </tr>
-</table>
+</table> -->
 
 
 
+<!-- DYNAMIC TABLE -->
 
-
-
-
-<!-- <table>
+<table id="counter">
   <tr>
     <th></th>
-    <th>Name</th>
+    <th id="name-fill">Name</th>
     <th id="red-th"></th>
     <th id="green-th"></th>
     <th><img src="../assets/images/sword.png" /></th>
@@ -119,17 +119,47 @@
     <th><img src="../assets/images/coin.png" /></th>
     <th><img src="../assets/images/star.png" /></th>
   </tr>
-  <tr ng-repeat="">
-    <td> {{ players.id }}</td>
-    <td>{{ players.name }}</td>
-    <td>{{ players.red }}</td>
-    <td>{{ players.green }}</td>
-    <td>{{ players.minigame }}</td>
-    <td>{{ players.candy }}</td>
-    <td>{{ players.coins }}</td>
-    <td>{{ players.stars }}</td>
+  <tr>
+    <td>P1</td>
+    <td>{{ player.playerOne.name }}</td>
+    <td>{{ player.playerOne.red }}</td>
+    <td>{{ player.playerOne.green }}</td>
+    <td>{{ player.playerOne.minigame }}</td>
+    <td>{{ player.playerOne.candy }}</td>
+    <td>{{ player.playerOne.coins }}</td>
+    <td>{{ player.playerOne.stars }}</td>
   </tr>
-</table> -->
+  <tr>
+    <td>P2</td>
+    <td>{{ player.playerTwo.name }}</td>
+    <td>{{ player.playerTwo.red }}</td>
+    <td>{{ player.playerTwo.green }}</td>
+    <td>{{ player.playerTwo.minigame }}</td>
+    <td>{{ player.playerTwo.candy }}</td>
+    <td>{{ player.playerTwo.coins }}</td>
+    <td>{{ player.playerTwo.stars }}</td>
+  </tr>
+  <tr>
+    <td>P3</td>
+    <td>{{ player.playerThree.name }}</td>
+    <td>{{ player.playerThree.red }}</td>
+    <td>{{ player.playerThree.green }}</td>
+    <td>{{ player.playerThree.minigame }}</td>
+    <td>{{ player.playerThree.candy }}</td>
+    <td>{{ player.playerThree.coins }}</td>
+    <td>{{ player.playerThree.stars }}</td>
+  </tr>
+  <tr>
+    <td>P4</td>
+    <td>{{ player.playerFour.name }}</td>
+    <td>{{ player.playerFour.red }}</td>
+    <td>{{ player.playerFour.green }}</td>
+    <td>{{ player.playerFour.minigame }}</td>
+    <td>{{ player.playerFour.candy }}</td>
+    <td>{{ player.playerFour.coins }}</td>
+    <td>{{ player.playerFour.stars }}</td>
+  </tr>
+</table>
 
 
 

@@ -50,6 +50,15 @@
     - Index pages
     - Counter table
 
+## Tech used --------
+- HTML5
+- CSS3
+- JavaScript
+- Express
+- Angular
+- SQL
+- jQuery
+
 
 ## Log ------------
 - [Mon 10/31]
@@ -67,3 +76,8 @@
   - Added 'Character Select' page
   - Created SQL table to store player data
   - Added 'players.js' route to server
+
+- [Thurs 11/3]
+  - Create character adds to Database
+  - Display selected character at "New Game" screen
+  - POST / GET working properly

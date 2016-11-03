@@ -9,7 +9,8 @@
 
 <form>
   <h6>P1</h6>
-  <input id="name" type="text" placeholder="Name" ng-model="player.playerOne.name" required/>
+  <input id="name" ng-init="player.playerOne.player_num = 1" type="text" placeholder="Name" ng-model="player.playerOne.name" required/>
+
   <select ng-model="player.playerOne.character">
     <option id="character" ng-value="player.mario">Mario</option>
     <option id="character" ng-value="player.luigi">Luigi</option>
@@ -17,12 +18,18 @@
     <option id="character" ng-value="player.toad">Toad</option>
     <option id="character" ng-value="player.koopa">Koopa</option>
   </select>
-  <button type="submit" id="ready" ng-click="player.addPlayer()">Ready!</button>
+
+  <button type="submit" id="ready" ng-click="player.createPlayer(player.playerOne)">Add P1</button>
+  <div id="new-character"><img src="{{player.playerOne.character}}" /></div>
 </form>
+
+
+
+
 
 <form>
   <h6>P2</h6>
-  <input id="name" type="text" placeholder="Name" ng-model="player.playerTwo.name" required/>
+  <input id="name" ng-init="player.playerOne.player_num = 2" type="text" placeholder="Name" ng-model="player.playerTwo.name" required/>
 
   <select ng-model="player.playerTwo.character">
     <option id="character" ng-value="player.mario">Mario</option>
@@ -31,12 +38,14 @@
     <option id="character" ng-value="player.toad">Toad</option>
     <option id="character" ng-value="player.koopa">Koopa</option>
   </select>
-  <button type="submit" id="ready" ng-click="player.addPlayer()">Ready!</button>
+
+  <button type="submit" id="ready" ng-click="player.createPlayer(player.playerTwo)">Add P2</button>
+  <div id="new-character"><img src="{{player.playerTwo.character}}" /></div>
 </form>
 
 <form>
   <h6>P3</h6>
-  <input id="name" type="text" placeholder="Name" ng-model="player.playerThree.name" required/>
+  <input id="name" ng-init="player.playerOne.player_num = 3" type="text" placeholder="Name" ng-model="player.playerThree.name" required/>
 
   <select ng-model="player.playerThree.character">
     <option id="character" ng-value="player.mario">Mario</option>
@@ -45,13 +54,14 @@
     <option id="character" ng-value="player.toad">Toad</option>
     <option id="character" ng-value="player.koopa">Koopa</option>
   </select>
-  <button type="submit" id="ready" ng-click="player.addPlayer()">Ready!</button>
 
+  <button type="submit" id="ready" ng-click="player.createPlayer(player.playerThree)">Add P3</button>
+  <div id="new-character"><img src="{{player.playerThree.character}}" /></div>
 </form>
 
 <form>
   <h6>P4</h6>
-  <input id="name" type="text" placeholder="Name" ng-model="player.playerFour.name" required/>
+  <input id="name" ng-init="player.playerOne.player_num = 4" type="text" placeholder="Name" ng-model="player.playerFour.name" required/>
 
   <select ng-model="player.playerFour.character">
     <option id="character" ng-value="player.mario">Mario</option>
@@ -60,13 +70,15 @@
     <option id="character" ng-value="player.toad">Toad</option>
     <option id="character" ng-value="player.koopa">Koopa</option>
   </select>
-  <button type="submit" id="ready" ng-click="player.addPlayer()">Ready!</button>
+
+  <button type="submit" id="ready" ng-click="player.createPlayer(player.playerFour)">Add P4</button>
+  <div id="new-character"><img src="{{player.playerFour.character}}" /></div>
 
 </form>
 </div> <!-- END CHAR FORMS -->
 
-<button id="startgame"><a href="/playerspage">Start!</a></button>
-
+<button id="startgame" ng-click="player.getPlayers()"></button>
+<a href="/playerspage">Start!</a>
 </div>
 
 

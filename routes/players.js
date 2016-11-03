@@ -29,14 +29,14 @@ router.get('/', function(req, res){
     // 2. (optional)  input parameters
     // 3. callback function to execute once the query is finished
     //      takes an error object and a result object as args
-    client.query('SELECT * FROM player;', function(err, result){
+    client.query('SELECT * FROM player ORDER BY player_num', function(err, result){
       done();
       if (err) {
         console.log('Error querying the DB', err);
         res.sendStatus(500);
         return;
       }
-
+ // WHERE id > (SELECT MAX(id) - 4 FROM player)
       console.log('Got rows from the DB:', result.rows);
       res.send(result.rows);
     });
@@ -66,6 +66,7 @@ router.get('/:id', function(req, res) {
 });
 
 router.post('/', function(req, res){
+  console.log('GOT REQ.BODY', req.body);
   pool.connect(function(err, client, done){
     if (err) {
       console.log('Error connecting the DB', err);
@@ -74,8 +75,9 @@ router.post('/', function(req, res){
       return;
     }
 
-    client.query('INSERT INTO playe (name, character, red, green, minigame, candy, coins, stars) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) returning *;',
-                 [req.body.name, req.body.character, req.body.red, req.body.green, req.body.minigame, req.body.candy, req.body.coins, req.body.stars],
+
+    client.query('INSERT INTO player (name, character, player_num) VALUES ($1, $2, $3) returning *;',
+                 [req.body.name, req.body.character, req.body.player_num],
                  function(err, result){
                    done();
                    if (err) {
