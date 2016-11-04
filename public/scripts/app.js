@@ -54,7 +54,7 @@ for (var i = 0; i < 1; i++) {
   $('table.free tr').filter(':hidden')
                .eq(Math.floor(Math.random() * (12 - i)))
                .show();
-               $('table.free td').css('background-color', 'yellow');
+               $('table.free td').css('background', 'linear-gradient(white, #ef3f39)');
 }
 });
 
@@ -65,7 +65,7 @@ for (var i = 0; i < 1; i++) {
   $('table.twov tr').filter(':hidden')
                .eq(Math.floor(Math.random() * (12 - i)))
                .show();
-               $('table.twov td').css('background-color', 'yellow');
+               $('table.twov td').css('background', 'linear-gradient(white, yellow)');
 }
 });
 

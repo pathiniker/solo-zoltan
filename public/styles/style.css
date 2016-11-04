@@ -105,6 +105,9 @@ a:focus {
   margin-left: 15px;
   margin-top: 15px;
 }
+.wide {
+  width: 100%;
+}
 
 /* ------------------- STATIC ------------------- */
 .static {
@@ -310,7 +313,7 @@ button:focus {
   background: linear-gradient(#103063, #451782);
 }
 #newgame-page form {
-  background: linear-gradient(#FFFFFF, #ff7221);
+  background: radial-gradient(#FFFFFF, #d8d8d8);
   margin-top: 10px;
   height: 60px;
   padding-top: 20px;
@@ -343,11 +346,13 @@ button:focus {
   width: 50%;
   height: 50px;
   border-radius: 15px;
-  border: 5px outset;
+  border: 4px outset;
   margin: 15px;
-  background-color: #0e3949;
-  color: white;
+  background: radial-gradient(#efefef, #6ed9e5);
+  color: black;
   font-family: 'Mario';
+  letter-spacing: 5px;
+  font-size: 17px;
 }
 #char-select a {
   display: block;
@@ -360,11 +365,11 @@ button:focus {
 }
 #char-forms {
   width: 80%;
-  border: 2px inset;
+  border: 4px inset;
   border-radius: 15px;
   margin: auto;
   padding: 15px;
-  background: linear-gradient(#efe52d, #ff7221);
+  background-image: url('../assets/images/texture1.png');
   min-width: 700px;
 }
 #new-character {
@@ -380,7 +385,7 @@ button:focus {
   margin-top: -15px;
   font-family: 'Mario';
   font-size: 8px;
-  background-color: lightblue;
+  background: linear-gradient(#55e043, #3dba2c);
   border-radius: 15px;
   border: 2px outset;
 }
@@ -468,11 +473,6 @@ button:focus {
     background-color: #ce5475;
     color: white;
 }
-#casino-page {
-  background-color: #ce5475;
-  background-position: center;
-  background-repeat: repeat-x;
-}
 #bowser {
   background-color: #b23030;
   color: white;
@@ -508,7 +508,7 @@ button:focus {
 
 /* ------------------- GREEN PAGE ------------------- */
 #green-page {
-  background-color: #6aed65;
+  background: radial-gradient(#86ff6b, #4ca339);
 }
 #roll-green {
   height: 0px;
@@ -524,10 +524,48 @@ button:focus {
   height: 300px;
   width: 300px;
 }
-
+#green-table {
+  margin: auto;
+  margin-top: 100px;
+  margin-left: 400px;
+}
+#green-table th {
+  min-width: 50px;
+  font-family: 'Mario';
+  font-size: 10px;
+}
+#green-table td {
+}
+#green-table table {
+  float: left;
+}
+#green-table button {
+  float: left;
+  margin-left: 50px;
+  box-shadow: 10px 10px 10px black;
+}
+#green-num {
+  font-family: 'Mario';
+  padding-left: -15px;
+}
+#green-data {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+}
+#green-larger {
+  font-size: 40px;
+  margin-right: 5px;
+}
 
 
 /* ------------------- MINI GAME PAGE ------------------- */
+#game-page-color {
+  background: linear-gradient(tomato, #681905);
+}
+.game-section img {
+  margin-left: 100px;
+}
 .free {
   margin: auto;
 }
@@ -573,12 +611,15 @@ button:focus {
 .game-type {
   background: none;
 }
+.teams {
+  width: 100%;
+}
 
 
 
 /* ------------------- CANDY PAGE ------------------- */
 #candy-page {
-  background-color: #9188f7;
+  background: radial-gradient(#db2e2e, #9188f7);
 }
 #candy-col-1 {
   width: 25%;
@@ -599,6 +640,7 @@ button:focus {
   margin-top: 120px;
   padding-left: 100px;
 }
+
 .candies img {
   height: 30px;
 }
@@ -676,6 +718,9 @@ button:focus {
 
 
 /* ------------------- RULES PAGE ------------------- */
+#rules-page-color {
+  background: linear-gradient(pink, #a3739f);
+}
 .rules {
     margin: auto;
     float: right;
@@ -739,10 +784,21 @@ button:focus {
 #ruleDescrip ul {
   float: none;
 }
+.space-descrip-circle {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
 
 
 
 /* ------------------- CASINO PAGE ------------------- */
+#casino-page {
+  background: radial-gradient(#27d868, #ce5475);
+  /*background-position: center;
+  background-repeat: repeat-x;*/
+}
+
 .yahtzeeWin {
   position: fixed;
   float: right;
@@ -843,7 +899,7 @@ th {
 
 /* ------------------- BOWSER PAGE ------------------- */
 #bowser-page {
-  background: linear-gradient(#701a1a, black);
+  background: radial-gradient(#701a1a, black);
 }
 #b-left {
   width: 30%;
