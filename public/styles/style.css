@@ -202,14 +202,17 @@ a:focus {
 #game-turn {
   width: 150px;
   height: 100px;
-  background-color: white;
+  background: linear-gradient(#FFFFFF, #bababa);
   border: 3px inset;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 #next-player {
   width: 150px;
   height: 40px;
   border: 3px outset;
-  background-color: skyblue;
+  background: linear-gradient(#582dd8, #2db1e5);
+  color: white;
   font-family: 'Mario';
   font-size: 9px;
 }
