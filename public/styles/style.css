@@ -61,6 +61,7 @@ h6 {
   display: inline;
   text-align: left;
   padding-left: 20px;
+  color: black;
 }
 p {
   color: black;
@@ -208,6 +209,10 @@ a:focus {
 #name-fill {
   min-width: 100px;
 }
+#counter td {
+  font-family: 'Mario';
+  font-size: 10px;
+}
 /* ------------------- SONG  ------------------- */
 .song {
   height: 50%;
@@ -263,7 +268,7 @@ a:focus {
   background: linear-gradient(#103063, #451782);
 }
 #newgame-page form {
-  background-color: white;
+  background: linear-gradient(#ff8e7a, #ffd3cc, #fff5cc);
   margin-top: 10px;
   height: 60px;
   padding-top: 20px;

@@ -18,6 +18,7 @@ player.koopa = '../assets/images/koopa.png';
   // player.playerOne = 'P1';
 
 
+
     player.createPlayer = function(newPlayer){
       playerService.createPlayer(newPlayer)
         .then(function(){
@@ -33,10 +34,10 @@ player.koopa = '../assets/images/koopa.png';
 
           console.log(player.playersArray);
 
-          console.log(player.playerOne);
-          console.log(player.playerTwo);
-          console.log(player.playerThree);
-          console.log(player.playerFour);
+          console.log(player.playersArray[0]);
+          console.log(player.playersArray[1]);
+          console.log(player.playersArray[2]);
+          console.log(player.playersArray[3]);
         });
     }
 

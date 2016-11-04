@@ -19,7 +19,7 @@ angular.module('routeApp')
             controller: 'PlayerController as player',
           }).when('/playerspage', {
             templateUrl: 'views/playerspage.html',
-            controller: 'PlayerController as player',
+            controller: 'IndexController as player',
           }).otherwise({
             redirectTo: '/home',
           });

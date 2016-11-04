@@ -14,6 +14,8 @@
     <script src="scripts/app.config.js" charset="utf-8"></script>
     <script src="scripts/player.service.js"></script>
     <script src="scripts/player.controller.js"></script>
+    <script src="scripts/index.controller.js"></script>
+
 
     <!-- <link rel="stylesheet" href="vendors/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="styles/style.css">
@@ -49,7 +51,7 @@
 
 <!-- STATIC TABLE -->
 
-  <div id="counter-box">
+  <div id="counter-box" ng-controller="IndexController as player">
 
 <!-- <table id="counter">
   <tr>
@@ -121,43 +123,43 @@
   </tr>
   <tr>
     <td>P1</td>
-    <td>{{ player.playerOne.name }}</td>
-    <td>{{ player.playerOne.red }}</td>
-    <td>{{ player.playerOne.green }}</td>
-    <td>{{ player.playerOne.minigame }}</td>
-    <td>{{ player.playerOne.candy }}</td>
-    <td>{{ player.playerOne.coins }}</td>
-    <td>{{ player.playerOne.stars }}</td>
+    <td>{{ player.playersArray[0].name }}</td>
+    <td>{{ player.playersArray[0].red }}</td>
+    <td>{{ player.playersArray[0].green }}</td>
+    <td>{{ player.playersArray[0].minigame }}</td>
+    <td>{{ player.playersArray[0].candy }}</td>
+    <td>{{ player.playersArray[0].coins }}</td>
+    <td>{{ player.playersArray[0].stars }}</td>
   </tr>
   <tr>
     <td>P2</td>
-    <td>{{ player.playerTwo.name }}</td>
-    <td>{{ player.playerTwo.red }}</td>
-    <td>{{ player.playerTwo.green }}</td>
-    <td>{{ player.playerTwo.minigame }}</td>
-    <td>{{ player.playerTwo.candy }}</td>
-    <td>{{ player.playerTwo.coins }}</td>
-    <td>{{ player.playerTwo.stars }}</td>
+    <td>{{ player.playersArray[1].name }}</td>
+    <td>{{ player.playersArray[1].red }}</td>
+    <td>{{ player.playersArray[1].green }}</td>
+    <td>{{ player.playersArray[1].minigame }}</td>
+    <td>{{ player.playersArray[1].candy }}</td>
+    <td>{{ player.playersArray[1].coins }}</td>
+    <td>{{ player.playersArray[1].stars }}</td>
   </tr>
   <tr>
     <td>P3</td>
-    <td>{{ player.playerThree.name }}</td>
-    <td>{{ player.playerThree.red }}</td>
-    <td>{{ player.playerThree.green }}</td>
-    <td>{{ player.playerThree.minigame }}</td>
-    <td>{{ player.playerThree.candy }}</td>
-    <td>{{ player.playerThree.coins }}</td>
-    <td>{{ player.playerThree.stars }}</td>
+    <td>{{ player.playersArray[2].name }}</td>
+    <td>{{ player.playersArray[2].red }}</td>
+    <td>{{ player.playersArray[2].green }}</td>
+    <td>{{ player.playersArray[2].minigame }}</td>
+    <td>{{ player.playersArray[2].candy }}</td>
+    <td>{{ player.playersArray[2].coins }}</td>
+    <td>{{ player.playersArray[2].stars }}</td>
   </tr>
   <tr>
     <td>P4</td>
-    <td>{{ player.playerFour.name }}</td>
-    <td>{{ player.playerFour.red }}</td>
-    <td>{{ player.playerFour.green }}</td>
-    <td>{{ player.playerFour.minigame }}</td>
-    <td>{{ player.playerFour.candy }}</td>
-    <td>{{ player.playerFour.coins }}</td>
-    <td>{{ player.playerFour.stars }}</td>
+    <td>{{ player.playersArray[3].name }}</td>
+    <td>{{ player.playersArray[3].red }}</td>
+    <td>{{ player.playersArray[3].green }}</td>
+    <td>{{ player.playersArray[3].minigame }}</td>
+    <td>{{ player.playersArray[3].candy }}</td>
+    <td>{{ player.playersArray[3].coins }}</td>
+    <td>{{ player.playersArray[3].stars }}</td>
   </tr>
 </table>
 
@@ -165,7 +167,7 @@
 
 <div id="turn-counter">
   <p id="game-turn">Turn:<span id="current-game-turn"></span></p>
-  <button id="next-player">Next player</button>
+  <button id="next-player" ng-click="player.getPlayers()">Next player</button>
 </div>
 
 <div id="current-turn">

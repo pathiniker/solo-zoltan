@@ -81,3 +81,4 @@
   - Create character adds to Database
   - Display selected character at "New Game" screen
   - POST / GET working properly
+  - ABLE TO SHOW INFORMATION

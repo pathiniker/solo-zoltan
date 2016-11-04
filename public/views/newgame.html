@@ -29,7 +29,7 @@
 
 <form>
   <h6>P2</h6>
-  <input id="name" ng-init="player.playerOne.player_num = 2" type="text" placeholder="Name" ng-model="player.playerTwo.name" required/>
+  <input id="name" ng-init="player.playerTwo.player_num = 2" type="text" placeholder="Name" ng-model="player.playerTwo.name" required/>
 
   <select ng-model="player.playerTwo.character">
     <option id="character" ng-value="player.mario">Mario</option>
@@ -45,7 +45,7 @@
 
 <form>
   <h6>P3</h6>
-  <input id="name" ng-init="player.playerOne.player_num = 3" type="text" placeholder="Name" ng-model="player.playerThree.name" required/>
+  <input id="name" ng-init="player.playerThree.player_num = 3" type="text" placeholder="Name" ng-model="player.playerThree.name" required/>
 
   <select ng-model="player.playerThree.character">
     <option id="character" ng-value="player.mario">Mario</option>
@@ -61,7 +61,7 @@
 
 <form>
   <h6>P4</h6>
-  <input id="name" ng-init="player.playerOne.player_num = 4" type="text" placeholder="Name" ng-model="player.playerFour.name" required/>
+  <input id="name" ng-init="player.playerFour.player_num = 4" type="text" placeholder="Name" ng-model="player.playerFour.name" required/>
 
   <select ng-model="player.playerFour.character">
     <option id="character" ng-value="player.mario">Mario</option>
@@ -77,8 +77,8 @@
 </form>
 </div> <!-- END CHAR FORMS -->
 
-<button id="startgame" ng-click="player.getPlayers()"></button>
-<a href="/playerspage">Start!</a>
+<button id="startgame" ng-click="player.getPlayers()"><a href="/playerspage">Start!</a></button>
+
 </div>
 
 
