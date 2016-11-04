@@ -54,7 +54,7 @@
 - HTML5
 - CSS3
 - JavaScript
-- Express
+- Node / Express
 - Angular
 - SQL
 - jQuery
@@ -81,4 +81,10 @@
   - Create character adds to Database
   - Display selected character at "New Game" screen
   - POST / GET working properly
-  - ABLE TO SHOW INFORMATION
+  - ABLE TO SHOW INFORMATION BOI
+
+- [Fri 11/4]
+  - Created turn count table, displaying on page
+  - Turned counter table into forms, input numbers
+  - Counter table working properly!
+  - Turn counter remembering turn

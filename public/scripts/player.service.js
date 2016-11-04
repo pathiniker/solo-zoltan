@@ -19,6 +19,12 @@ function PlayerService($http){
     });
   };
 
+  this.updateCounter = function(players){
 
+    return $http.put('/players/'+players.id, players)
+        .then(function(response){
+          return response.data;
+        });
+  };
 
 }; // end PlayerService

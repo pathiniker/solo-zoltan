@@ -5,17 +5,10 @@ function IndexController($http, playerService){
   var player = this;
   console.log('IndexController loaded');
 
-// player.mario = '../assets/images/mario.png';
-// player.luigi = '../assets/images/luigi.png';
-// player.peach = '../assets/images/peach.png';
-// player.toad = '../assets/images/toadplayer.png';
-// player.koopa = '../assets/images/koopa.png';
-
 
   player.playersArray = [];
   player.player = {};
 
-  // player.playerOne = 'P1';
 
     player.getPlayers = function(allPlayers){
       playerService.getPlayers(allPlayers)
@@ -24,13 +17,19 @@ function IndexController($http, playerService){
 
           console.log(player.playersArray);
 
-          console.log(player.playersArray[0]);
-          console.log(player.playersArray[1]);
-          console.log(player.playersArray[2]);
-          console.log(player.playersArray[3]);
         });
     }
 
+    player.updateCounter = function(allCount){
+      allCount.forEach(function(players){
+        playerService.updateCounter(players)
+          .then(function(){
+            player.getPlayers();
+          });
+      });
+    }
+
+    
 
     player.getPlayers();
 

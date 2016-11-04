@@ -15,6 +15,8 @@
     <script src="scripts/player.service.js"></script>
     <script src="scripts/player.controller.js"></script>
     <script src="scripts/index.controller.js"></script>
+    <script src="scripts/turn.service.js"></script>
+    <script src="scripts/turn.controller.js"></script>
 
 
     <!-- <link rel="stylesheet" href="vendors/bootstrap.min.css" /> -->
@@ -49,68 +51,16 @@
   </div>
 
 
-<!-- STATIC TABLE -->
-
   <div id="counter-box" ng-controller="IndexController as player">
-
-<!-- <table id="counter">
-  <tr>
-    <th></th>
-    <th>Name</th>
-    <th id="red-th"></th>
-    <th id="green-th"></th>
-    <th><img src="../assets/images/sword.png" /></th>
-    <th><img src="../assets/images/candy.png" /></th>
-    <th><img src="../assets/images/coin.png" /></th>
-    <th><img src="../assets/images/star.png" /></th>
-  </tr>
-  <tr>
-    <td>P1</td>
-    <td>{{ player }}</td>
-    <td><button class="counterbutton" id="red-one"><span id="red-one"></span></button></td>
-    <td><button class="counterbutton" id="green-one"><span id="green-one"></span></button></td>
-    <td><button class="counterbutton" id="mini-one"><span id="mini-one"></span></button></td>
-    <td><button class="counterbutton" id="candy-one"><span id="candy-one"></span></button></td>
-    <td><button class="counterbutton" id="coin-one"><span id="coin-one"></span></button></td>
-    <td><button class="counterbutton" id="star-one"><span id="star-one"></span></button></td>
-  </tr>
-  <tr>
-    <td>P2</td>
-    <td>{{ player }}</td>
-    <td><button class="counterbutton" id="red-two"><span id="red-two"></span></button></td>
-    <td><button class="counterbutton" id="green-two"><span id="green-two"></span></button></td>
-    <td><button class="counterbutton" id="mini-two"><span id="mini-two"></span></button></td>
-    <td><button class="counterbutton" id="candy-two"><span id="candy-two"></span></button></td>
-    <td><button class="counterbutton" id="coin-two"><span id="coin-two"></span></button></td>
-    <td><button class="counterbutton" id="star-two"><span id="star-two"></span></button></td>
-  </tr>
-  <tr>
-    <td>P3</td>
-    <td>{{ player }}</td>
-    <td><button class="counterbutton" id="red-three"><span id="red-three"></span></button></td>
-    <td><button class="counterbutton" id="green-three"><span id="green-three"></span></button></td>
-    <td><button class="counterbutton" id="mini-three"><span id="mini-three"></span></button></td>
-    <td><button class="counterbutton" id="candy-three"><span id="candy-three"></span></button></td>
-    <td><button class="counterbutton" id="coin-three"><span id="coin-three"></span></button></td>
-    <td><button class="counterbutton" id="star-three"><span id="star-three"></span></button></td>
-  </tr>
-  <tr>
-    <td>P4</td>
-    <td>{{ player }}</td>
-    <td><button class="counterbutton" id="red-four"><span id="red-four"></span></button></td>
-    <td><button class="counterbutton" id="green-four"><span id="green-four"></span></button></td>
-    <td><button class="counterbutton" id="mini-four"><span id="mini-four"></span></button></td>
-    <td><button class="counterbutton" id="candy-four"><span id="candy-four"></span></button></td>
-    <td><button class="counterbutton" id="coin-four"><span id="coin-four"></span></button></td>
-    <td><button class="counterbutton" id="star-four"><span id="star-four"></span></button></td>
-  </tr>
-</table> -->
 
 
 
 <!-- DYNAMIC TABLE -->
 
 <table id="counter">
+  <form>
+
+
   <tr>
     <th></th>
     <th id="name-fill">Name</th>
@@ -122,56 +72,61 @@
     <th><img src="../assets/images/star.png" /></th>
   </tr>
   <tr>
-    <td>P1</td>
-    <td>{{ player.playersArray[0].name }}</td>
-    <td>{{ player.playersArray[0].red }}</td>
-    <td>{{ player.playersArray[0].green }}</td>
-    <td>{{ player.playersArray[0].minigame }}</td>
-    <td>{{ player.playersArray[0].candy }}</td>
-    <td>{{ player.playersArray[0].coins }}</td>
-    <td>{{ player.playersArray[0].stars }}</td>
+    <td class="grey-box" id="counter-text">P1</td>
+    <td id="counter-text">{{ player.playersArray[0].name }}</td>
+    <td><input type="number" ng-model="player.playersArray[0].red"/></td>
+    <td><input type="number" ng-model="player.playersArray[0].green"/></td>
+    <td><input type="number" ng-model="player.playersArray[0].minigame"/></td>
+    <td><input type="number" ng-model="player.playersArray[0].candy"/></td>
+    <td><input type="number" ng-model="player.playersArray[0].coins"/></td>
+    <td><input type="number" ng-model="player.playersArray[0].stars"/></td>
   </tr>
   <tr>
-    <td>P2</td>
-    <td>{{ player.playersArray[1].name }}</td>
-    <td>{{ player.playersArray[1].red }}</td>
-    <td>{{ player.playersArray[1].green }}</td>
-    <td>{{ player.playersArray[1].minigame }}</td>
-    <td>{{ player.playersArray[1].candy }}</td>
-    <td>{{ player.playersArray[1].coins }}</td>
-    <td>{{ player.playersArray[1].stars }}</td>
+    <td class="grey-box" id="counter-text">P2</td>
+    <td id="counter-text">{{ player.playersArray[1].name }}</td>
+    <td><input type="number" ng-model="player.playersArray[1].red"/></td>
+    <td><input type="number" ng-model="player.playersArray[1].green"/></td>
+    <td><input type="number" ng-model="player.playersArray[1].minigame"/></td>
+    <td><input type="number" ng-model="player.playersArray[1].candy"/></td>
+    <td><input type="number" ng-model="player.playersArray[1].coins"/></td>
+    <td><input type="number" ng-model="player.playersArray[1].stars"/></td>
   </tr>
   <tr>
-    <td>P3</td>
-    <td>{{ player.playersArray[2].name }}</td>
-    <td>{{ player.playersArray[2].red }}</td>
-    <td>{{ player.playersArray[2].green }}</td>
-    <td>{{ player.playersArray[2].minigame }}</td>
-    <td>{{ player.playersArray[2].candy }}</td>
-    <td>{{ player.playersArray[2].coins }}</td>
-    <td>{{ player.playersArray[2].stars }}</td>
+    <td class="grey-box" id="counter-text">P3</td>
+    <td id="counter-text">{{ player.playersArray[2].name }}</td>
+    <td><input type="number" ng-model="player.playersArray[2].red"/></td>
+    <td><input type="number" ng-model="player.playersArray[2].green"/></td>
+    <td><input type="number" ng-model="player.playersArray[2].minigame"/></td>
+    <td><input type="number" ng-model="player.playersArray[2].candy"/></td>
+    <td><input type="number" ng-model="player.playersArray[2].coins"/></td>
+    <td><input type="number" ng-model="player.playersArray[2].stars"/></td>
   </tr>
   <tr>
-    <td>P4</td>
-    <td>{{ player.playersArray[3].name }}</td>
-    <td>{{ player.playersArray[3].red }}</td>
-    <td>{{ player.playersArray[3].green }}</td>
-    <td>{{ player.playersArray[3].minigame }}</td>
-    <td>{{ player.playersArray[3].candy }}</td>
-    <td>{{ player.playersArray[3].coins }}</td>
-    <td>{{ player.playersArray[3].stars }}</td>
+    <td class="grey-box" id="counter-text">P4</td>
+    <td id="counter-text">{{ player.playersArray[3].name }}</td>
+    <td><input type="number" ng-model="player.playersArray[3].red"/></td>
+    <td><input type="number" ng-model="player.playersArray[3].green"/></td>
+    <td><input type="number" ng-model="player.playersArray[3].minigame"/></td>
+    <td><input type="number" ng-model="player.playersArray[3].candy"/></td>
+    <td><input type="number" ng-model="player.playersArray[3].coins"/></td>
+    <td><input type="number" ng-model="player.playersArray[3].stars"/></td>
   </tr>
+
 </table>
 
 
+<div id="turn-counter" ng-controller="TurnController as turn">
+  <div id="game-turn">
+  <label for="turn-count">Turn:</label><br />
+  <input type="number" ng-model="turn.turnsArray[0].turn_num" />
+    </div>
 
-<div id="turn-counter">
-  <p id="game-turn">Turn:<span id="current-game-turn"></span></p>
-  <button id="next-player" ng-click="player.getPlayers()">Next player</button>
+  <button id="next-player" ng-click="player.updateCounter(player.playersArray); turn.updateTurn(turn.turnsArray)">Next player</button>
 </div>
+</form>
 
 <div id="current-turn">
-  <img src="../assets/images/yoshi.png" />
+  <img src="{{ player.playersArray[0].character}}" />
   <!-- <p>Current Turn</p> -->
 </div>
 

@@ -157,8 +157,8 @@ a:focus {
 #counter-box th {
   width: 50px;
 }
-#counter-box td {
-
+.grey-box {
+  background-color: lightgrey;
 }
 #counter-box img {
   height: 15px;
@@ -177,20 +177,24 @@ a:focus {
   border: none;
 }
 .counterbutton {
-    background-color: white;
+    background-color: inherit;
     color: black;
     height: 100%;
     width: 100%;
-    font-size: 9px;
-    font-family: 'Mario';
+    font-size: 14px;
+    /*font-family: 'Mario';
     margin: 0;
-    padding: 0;
+    padding: 0;*/
     text-align: center;
     border: none;
 }
 #turn-counter {
   float: left;
   padding-left: 30px;
+
+}
+#currentTurn-count {
+  font-size: 30px;
 }
 #game-turn {
   width: 150px;
@@ -209,9 +213,46 @@ a:focus {
 #name-fill {
   min-width: 100px;
 }
-#counter td {
+#counter-text {
   font-family: 'Mario';
   font-size: 10px;
+}
+#counter input {
+  width: 40px;
+  height: 100%;
+  font-family: Arial;
+  font-size: 12px;
+  text-align: center;
+  padding-left: 10px;
+
+}
+#counter input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    color: transparent;
+      text-shadow: 0px 0px 0.5px black;
+}
+#game-turn label {
+  text-align: center;
+  font-family: 'Mario';
+  font-size: 10px;
+}
+#game-turn input {
+  font-size: 36px;
+  text-align: center;
+  margin-top: -10px;
+  margin-left: 10px;
+  background: none;
+}
+#game-turn input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    color: transparent;
+      text-shadow: 0px 0px 0.5px black;
 }
 /* ------------------- SONG  ------------------- */
 .song {
@@ -259,8 +300,9 @@ a:focus {
   height: 100px;
   border-radius: 15px;
   border: 5px outset;
-  background-color: lightblue;
+  background: linear-gradient(#582dd8, #2db1e5);
   font-size: 20px;
+  color: white;
 }
 
 /* ------------------- NEW GAME ------------------- */
@@ -268,7 +310,7 @@ a:focus {
   background: linear-gradient(#103063, #451782);
 }
 #newgame-page form {
-  background: linear-gradient(#ff8e7a, #ffd3cc, #fff5cc);
+  background: linear-gradient(#FFFFFF, #ff7221);
   margin-top: 10px;
   height: 60px;
   padding-top: 20px;
@@ -348,7 +390,7 @@ a:focus {
   background: linear-gradient(#efe52d, #ff7221);
 }
 .player-display {
-  height: 300px;
+  height: 340px;
   width: 20%;
   float: left;
   background: linear-gradient(#103063, #451782);
@@ -359,8 +401,10 @@ a:focus {
 }
 .player-display img {
   height: 200px;
-  margin-left: 70px;
+  margin-left: 50px;
   padding-top: 10px;
+  /*background: radial-gradient(#FFFFFF, #451782);
+  border-radius: 100%;*/
 }
 .player-display p {
   margin-bottom: 50px;
@@ -369,6 +413,11 @@ a:focus {
 
 }
 #all-players {
+  margin-top: 80px;
+  margin-left: 120px;
+}
+#display-small {
+  height: 40px;
   margin: auto;
 }
 
@@ -450,15 +499,7 @@ a:focus {
 #turncounter {
   font-family: 'Mario';
 }
-#counterbutton {
-    background-color: white;
-    color: black;
-    height: 70px;
-    width: 250px;
-    border-radius: 20px;
-    font-size: 22px;
-    font-family: 'Mario';
-}
+
 
 button:focus {
   display: none;

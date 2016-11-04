@@ -15,15 +15,13 @@ player.koopa = '../assets/images/koopa.png';
   player.playersArray = [];
   player.player = {};
 
-  // player.playerOne = 'P1';
-
-
 
     player.createPlayer = function(newPlayer){
       playerService.createPlayer(newPlayer)
         .then(function(){
           player.playersArray = [];
-
+          // var audio = new Audio('audio_file.mp3');
+          // audio.play();
         });
     }
 
@@ -32,17 +30,8 @@ player.koopa = '../assets/images/koopa.png';
         .then(function(response){
           player.playersArray = response;
 
-          console.log(player.playersArray);
-
-          console.log(player.playersArray[0]);
-          console.log(player.playersArray[1]);
-          console.log(player.playersArray[2]);
-          console.log(player.playersArray[3]);
         });
     }
-
-
-
 
 
 } // end PlayerController
