@@ -94,3 +94,4 @@
   - Created confirm new game page
   - Starting new game clears table
   - 'Start Game' adds all players
+  - Functioning "standings" box on footer

@@ -125,13 +125,26 @@
 
 <!-- ====== CURRENT PLAYER DISPLAY ====== -->
 <div id="current-turn">
+<h5>Standings</h5>
+<ol id="standings" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">
+  <li>
+    <img id="standings-char" src="{{player.character}}" />
+    {{player.name}}
+    <img src="../assets/images/coin.png" />{{player.coins}}
+    <img src="../assets/images/star.png" />{{player.stars}}
+  </li>
+</ol>
 
-<ul id="standings">
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
+
+<!-- <table id="standings-table">
+  <tr ng-repeat="player in player.playersArray | orderBy:{{player.playersArray.stars}}">
+    <td scope="row"><img src="{{player.playersArray.character}}" /></td>
+    <td scope="row">{{player.playersArray.name}}</td>
+    <td scope="row"><img src="../assets/images/coin.png" />{{player.playersArray.coins}}</td>
+    <td scope="row"><img src="../assets/images/star.png" />{{player.playersArray.stars}}</td>
+  </tr>
+</table> -->
+
 </div>
 
 
