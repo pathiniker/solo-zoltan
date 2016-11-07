@@ -20,8 +20,6 @@ player.koopa = '../assets/images/koopa.png';
       playerService.createPlayer(newPlayer)
         .then(function(){
           player.playersArray = [];
-          // var audio = new Audio('audio_file.mp3');
-          // audio.play();
         });
     }
 
@@ -32,6 +30,13 @@ player.koopa = '../assets/images/koopa.png';
 
         });
     }
+
+    player.clearTable = function(remove){
+      playerService.clearTable(remove)
+        .then(function(){
+          player.playersArray = [];
+        });
+    };
 
 
 } // end PlayerController

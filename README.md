@@ -88,3 +88,9 @@
   - Turned counter table into forms, input numbers
   - Counter table working properly!
   - Turn counter remembering turn
+  - GAME IS PLAYABLE, SON!!!
+
+- [Mon 11/7]
+  - Created confirm new game page
+  - Starting new game clears table
+  - 'Start Game' adds all players

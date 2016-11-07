@@ -68,5 +68,53 @@ var id = req.params.id;
   });
 });
 
+// --------- RESET TURN ----------- //
+router.delete('/', function(req, res) {
+  pool.connect(function(err, client, done) {
+    if (err) {
+      console.log('Error connecting to the DB', err);
+      res.sendStatus(500);
+      done();
+      return;
+    }
+    client.query('TRUNCATE TABLE turncount', function(err, result){
+      done();
+      if (err) {
+        console.log('Error querying the DB', err);
+        res.sendStatus(500);
+        return;
+      }
+
+      console.log('Got rows from the DB:', result.rows);
+      res.send(result.rows);
+    });
+  });
+});
+
+// ------- BEGIN GAME --------- //
+router.post('/', function(req, res){
+  console.log('GOT REQ.BODY', req.body);
+  pool.connect(function(err, client, done){
+    if (err) {
+      console.log('Error connecting the DB', err);
+      res.sendStatus(500);
+      done();
+      return;
+    }
+
+
+    client.query('INSERT INTO turncount VALUES (1) returning *;',
+                 function(err, result){
+                   done();
+                   if (err) {
+                     console.log('Error querying the DB', err);
+                     res.sendStatus(500);
+                     return;
+                   }
+                   console.log('Got rows from the DB:', result.rows);
+                   res.send(result.rows);
+                 });
+  });
+});
 
 module.exports = router;

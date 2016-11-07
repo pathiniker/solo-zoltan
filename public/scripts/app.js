@@ -733,5 +733,7 @@ $('.b-spin').empty();
 
 // END BOWSER PAGE
 
+// ----------- CURRENT PLAYER DISPLAY ----------- //
+
 
     }) //end doc ready

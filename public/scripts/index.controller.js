@@ -29,9 +29,11 @@ function IndexController($http, playerService){
       });
     }
 
-    
-
     player.getPlayers();
+
+// ------ NEXT PLAYER ------ //
+console.log('logging array', player.playersArray);
+
 
 
 

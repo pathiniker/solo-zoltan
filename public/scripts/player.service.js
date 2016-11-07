@@ -20,11 +20,17 @@ function PlayerService($http){
   };
 
   this.updateCounter = function(players){
-
     return $http.put('/players/'+players.id, players)
         .then(function(response){
           return response.data;
         });
+  };
+
+  this.clearTable = function(remove){
+    return $http.delete('/players', remove)
+      .then(function(response){
+        return response.data;
+      });
   };
 
 }; // end PlayerService

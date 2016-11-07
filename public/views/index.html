@@ -55,11 +55,9 @@
 
 
 
-<!-- DYNAMIC TABLE -->
-
+    <!-- ====== COUNTER TABLE ====== -->
 <table id="counter">
   <form>
-
 
   <tr>
     <th></th>
@@ -114,20 +112,26 @@
 
 </table>
 
-
+<!-- ====== TURN NUMBER DISPLAY ====== -->
 <div id="turn-counter" ng-controller="TurnController as turn">
   <div id="game-turn">
   <label for="turn-count">Turn:</label><br />
   <input type="number" ng-model="turn.turnsArray[0].turn_num" />
     </div>
 
-  <button id="next-player" ng-click="player.updateCounter(player.playersArray); turn.updateTurn(turn.turnsArray)">Next player</button>
+  <button id="next-player" ng-click="player.updateCounter(player.playersArray); turn.updateTurn(turn.turnsArray)">Save</button>
 </div>
 </form>
 
+<!-- ====== CURRENT PLAYER DISPLAY ====== -->
 <div id="current-turn">
-  <img src="{{ player.playersArray[0].character}}" />
-  <!-- <p>Current Turn</p> -->
+
+<ul id="standings">
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 </div>
 
 

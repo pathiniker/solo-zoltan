@@ -24,6 +24,20 @@ function TurnController($http, turnService){
           turn.getCurrentTurn();
         });
     });
+  };
+
+  turn.resetTurn = function(reset){
+    turnService.resetTurn(reset)
+      .then(function(){
+        turn.turnsArray = [];
+      });
+  };
+
+  turn.beginGame = function(begin){
+    turnService.beginGame(begin)
+      .then(function(){
+        turn.turnsArray = [];
+      });
   }
 
 

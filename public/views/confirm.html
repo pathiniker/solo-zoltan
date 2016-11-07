@@ -1,0 +1,31 @@
+<div class="content" id="confirm-page">
+
+
+
+<div id="confirm-box" ng-controller="TurnController as turn">
+
+<h3>Confirm</h3>
+<p>
+  Are you sure you want to start a new game? <br />
+  All current progress will be lost.
+</p>
+<div id="confirm-buttons">
+  <button class="confirm-button" id="yes" ng-click="player.clearTable(); turn.resetTurn()"><a href="/newgame">Yes!</a></button>
+<br />
+  <button class="confirm-button" id="no"><a href="/home">No!</a></button>
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>

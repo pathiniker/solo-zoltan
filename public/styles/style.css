@@ -291,6 +291,9 @@ button:focus {
   font-size: 8px;
   display: inline-block;
 }
+#current-player {
+  list-style-type: none;
+}
 
 /* ------------------- HOME PAGE ------------------- */
 #home-page {
@@ -310,6 +313,52 @@ button:focus {
   font-size: 20px;
   color: white;
 }
+
+/* ------------------- CONFIRM PAGE ------------------- */
+#confirm-page {
+  height: 800px;
+  background-image: url('../assets/images/warp.jpg');
+  background-size: cover;
+  margin-top: -20px;
+}
+#confirm-page h3 {
+  background: linear-gradient(grey, white);
+  margin-top: 0;
+}
+#confirm-box {
+  margin: 50px auto;
+  width: 600px;
+  height: 400px;
+  background-color: white;
+  border-radius: 15px;
+  border: 5px inset;
+  padding: auto 10px;
+}
+#confirm-buttons {
+  margin: auto;
+  width: 100%;
+}
+.confirm-button {
+  border-radius: 15px;
+  font-family: 'Mario';
+}
+#yes {
+  width: 100px;
+  height: 40px;
+  background: linear-gradient(green, white);
+  margin-left: 250px;
+  margin-top: 50px;
+}
+#no {
+  width: 400px;
+  height: 80px;
+  background: linear-gradient(red, white);
+  margin-left: 100px;
+  margin-top: 50px;
+  font-size: 20px;
+
+}
+
 
 /* ------------------- NEW GAME ------------------- */
 #newgame-page {
@@ -380,7 +429,7 @@ button:focus {
   width: 40px;
   height: 70px;
   margin-top: -15px;
-  margin-right: 15px;
+  margin-right: 80px;
 }
 #ready {
   height: 25px;

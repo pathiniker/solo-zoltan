@@ -20,3 +20,8 @@ CREATE TABLE player (
 	coins int DEFAULT 3,
 	stars int DEFAULT 0
 );
+
+CREATE TABLE turncount (
+	id SERIAL PRIMARY KEY,
+	turn_num int DEFAULT 1
+);

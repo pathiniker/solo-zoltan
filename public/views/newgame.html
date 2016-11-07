@@ -1,6 +1,6 @@
 <div class="content" id="newgame-page">
 
-<div id="char-select">
+<div id="char-select" ng-controller="TurnController as turn">
 
 <h3>Choose your characters!</h3>
 
@@ -19,7 +19,7 @@
     <option id="character" ng-value="player.koopa">Koopa</option>
   </select>
 
-  <button type="submit" id="ready" ng-click="player.createPlayer(player.playerOne)">Add P1</button>
+  <!-- <button type="submit" id="ready" ng-click="player.createPlayer(player.playerOne)">Add P1</button> -->
   <div id="new-character"><img src="{{player.playerOne.character}}" /></div>
 </form>
 
@@ -39,7 +39,7 @@
     <option id="character" ng-value="player.koopa">Koopa</option>
   </select>
 
-  <button type="submit" id="ready" ng-click="player.createPlayer(player.playerTwo)">Add P2</button>
+  <!-- <button type="submit" id="ready" ng-click="player.createPlayer(player.playerTwo)">Add P2</button> -->
   <div id="new-character"><img src="{{player.playerTwo.character}}" /></div>
 </form>
 
@@ -55,7 +55,7 @@
     <option id="character" ng-value="player.koopa">Koopa</option>
   </select>
 
-  <button type="submit" id="ready" ng-click="player.createPlayer(player.playerThree)">Add P3</button>
+  <!-- <button type="submit" id="ready" ng-click="player.createPlayer(player.playerThree)">Add P3</button> -->
   <div id="new-character"><img src="{{player.playerThree.character}}" /></div>
 </form>
 
@@ -71,13 +71,13 @@
     <option id="character" ng-value="player.koopa">Koopa</option>
   </select>
 
-  <button type="submit" id="ready" ng-click="player.createPlayer(player.playerFour)">Add P4</button>
+  <!-- <button type="submit" id="ready" ng-click="player.createPlayer(player.playerFour)">Add P4</button> -->
   <div id="new-character"><img src="{{player.playerFour.character}}" /></div>
 
 </form>
 </div> <!-- END CHAR FORMS -->
 
-<button id="startgame" ng-click="player.getPlayers()"><a href="/playerspage">Start!</a></button>
+<button id="startgame" ng-click="turn.beginGame(); player.createPlayer(player.playerOne); player.createPlayer(player.playerTwo); player.createPlayer(player.playerThree); player.createPlayer(player.playerFour)"><a href="/playerspage">Start!</a></button>
 
 </div>
 

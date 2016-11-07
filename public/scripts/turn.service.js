@@ -18,6 +18,18 @@ function TurnService($http){
         });
   };
 
+  this.resetTurn = function(reset){
+    return $http.delete('/currentTurn', reset)
+      .then(function(response){
+        return response.data;
+      });
+  };
 
+  this.beginGame = function(begin){
+    return $http.post('/currentTurn', begin)
+          .then(function(response){
+            return response.data;
+    });
+  };
 
 }; // end TurnService

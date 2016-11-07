@@ -20,6 +20,9 @@ angular.module('routeApp')
           }).when('/playerspage', {
             templateUrl: 'views/playerspage.html',
             controller: 'IndexController as player',
+          }).when('/confirm', {
+            templateUrl: 'views/confirm.html',
+            controller: 'PlayerController as player',
           }).otherwise({
             redirectTo: '/home',
           });
