@@ -322,9 +322,20 @@ button:focus {
   font-size: 12px;
   margin-top: 0;
 }
-
-#standings ol {
-
+#standings-table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+#current-turn table {
+  margin-left: 0px;
+}
+#standings-table td {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* ------------------- HOME PAGE ------------------- */
