@@ -82,3 +82,9 @@
   - Starting new game clears table
   - 'Start Game' adds all players
   - Functioning "standings" box on footer
+
+- [Tues 11/8]
+  - Began converting jQuery to Angular
+  - Coverted "green" page to Angular
+  - Created 'chance' route and service
+  - Storing 'candy' in database

@@ -348,6 +348,10 @@ button:focus {
 #standings-table tr:nth-child(even) {
   background-color: #cecece;
 }
+#standings-table tr:nth-child(1) {
+  background-color: #ffee7f;
+  font-weight: bold;
+}
 
 
 /* ------------------- HOME PAGE ------------------- */
@@ -749,7 +753,9 @@ button:focus {
   margin-top: 120px;
   padding-left: 100px;
 }
-
+.candy-color {
+  padding: 3px 10px;
+}
 .candies img {
   height: 30px;
 }
@@ -757,7 +763,7 @@ button:focus {
   width: 300px;
 }
 #candy-cost {
-  width: 100px;
+  padding: 3px 10px;
 }
 #choose-candy {
   background-color: white;

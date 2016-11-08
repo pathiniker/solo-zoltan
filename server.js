@@ -4,6 +4,7 @@ var path = require('path');
 var app = express();
 var players = require('./routes/players');
 var currentTurn = require('./routes/currentTurn');
+var chance = require('./routes/chance');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -12,6 +13,7 @@ app.use(express.static('public'));
 
 app.use('/players', players);
 app.use('/currentTurn', currentTurn);
+app.use('/chance', chance);
 
 app.get('/*', function(req, res){
   res.sendFile(path.join(__dirname, 'public/views/index.html'));

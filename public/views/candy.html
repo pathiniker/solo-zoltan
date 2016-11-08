@@ -7,11 +7,11 @@
 </div>
 
 <div id="candy-col-2">
-  <button id="choose-candy"><span id="button-text">"Choose 1 of these 3 candy!"</span></button>
+  <button ng-click="candy.pickThree()" id="choose-candy"><span id="button-text">"Choose 1 of these 3 candy!"</span></button>
 </div>
 
 <div id="candy-col-3">
-    <table class="candies">
+    <!-- <table class="candies">
         <tr>
             <td id="red-candy"><img src="../assets/images/candy.png"></td>
             <td id="candy-descrip">Jump to another player</td>
@@ -42,7 +42,38 @@
             <td id="candy-descrip">Change location of <img src="../assets/images/star.png"></td>
             <td id="candy-cost"><img src="../assets/images/coin.png"><img src="../assets/images/coin.png"><img src="../assets/images/coin.png"></td>
         </tr>
+    </table> -->
+
+    <!-- <table class="candies">
+      <button ng-click="candy.pickThree()"></button>
+      <tr ng-repeat="candy in candy.candyArray">
+        <td class="candy-color" id="{{candy.color}}"><img src="../assets/images/candy.png" /></td>
+        <td id="candy-descrip">{{candy.description}}</td>
+        <td id="candy-cost">{{candy.price}}<img src="../assets/images/coin.png" /></td>
+      </tr>
+    </table> -->
+    <button ng-click="candy.pickThree()"></button>
+
+    <table class="candies">
+      <tr>
+        <td class="candy-color" id="{{candy.stockOne.color}}"><img src="../assets/images/candy.png" /></td>
+        <td id="candy-descrip">{{candy.stockOne.description}}</td>
+        <td id="candy-cost">{{candy.stockOne.price}}<img src="../assets/images/coin.png" /></td>
+      </tr>
+      <tr>
+        <td class="candy-color" id="{{candy.stockTwo.color}}"><img src="../assets/images/candy.png" /></td>
+        <td id="candy-descrip">{{candy.stockTwo.description}}</td>
+        <td id="candy-cost">{{candy.stockThree.price}}<img src="../assets/images/coin.png" /></td>
+      </tr>
+      <tr>
+        <td class="candy-color" id="{{candy.stockThree.color}}"><img src="../assets/images/candy.png" /></td>
+        <td id="candy-descrip">{{candy.stockThree.description}}</td>
+        <td id="candy-cost">{{candy.stockThree.price}}<img src="../assets/images/coin.png" /></td>
+      </tr>
+
     </table>
+
+
   </div>
 
 

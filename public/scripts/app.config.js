@@ -8,8 +8,10 @@ angular.module('routeApp')
             templateUrl: 'views/game.html',
           }).when('/green', {
             templateUrl: 'views/green.html',
+            controller: 'GreenController as green',
           }).when('/candy', {
             templateUrl: 'views/candy.html',
+            controller: 'CandyController as candy',
           }).when('/casino', {
             templateUrl: 'views/casino.html',
           }).when('/bowser', {
