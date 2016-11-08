@@ -6,6 +6,7 @@ angular.module('routeApp')
             templateUrl: 'views/rules.html',
           }).when('/game', {
             templateUrl: 'views/game.html',
+            controller: 'MiniGameController as game',
           }).when('/green', {
             templateUrl: 'views/green.html',
             controller: 'GreenController as green',

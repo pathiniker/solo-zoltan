@@ -10,6 +10,20 @@ function ChanceService($http){
       });
   };
 
+  this.getFFA = function(allFFA){
+    return $http.get('/ffa', allFFA)
+      .then(function(response){
+        return response.data;
+      });
+  };
+
+  this.getTwo = function(allTwo){
+    return $http.get('/two', allTwo)
+      .then(function(response){
+        return response.data;
+      });
+  };
+
 
 
 

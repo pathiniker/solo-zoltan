@@ -676,6 +676,36 @@ button:focus {
 #game-page-color {
   background: linear-gradient(tomato, #681905);
 }
+
+.game-col-1 {
+  float: left;
+  width: 30%;
+  background: linear-gradient(#353535, #777777);
+  height: 1000px;
+  border-right: 5px inset;
+}
+#team-player {
+  display: inline-block;
+}
+.game-col-1 img {
+  height: 50px;
+  display: inline-block;
+}
+.game-col-2 {
+  float: left;
+  width: 70%;
+  height: 100%;
+}
+.game-col-2 img {
+  float: right;
+  height: 450px;
+  /*margin-right: 100px;*/
+}
+
+
+
+
+
 .game-section img {
   margin-left: 100px;
 }
