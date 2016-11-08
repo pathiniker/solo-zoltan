@@ -12,9 +12,11 @@
 
     <script src="scripts/app.module.js" charset="utf-8"></script>
     <script src="scripts/app.config.js" charset="utf-8"></script>
+
     <script src="scripts/player.service.js"></script>
     <script src="scripts/player.controller.js"></script>
     <script src="scripts/index.controller.js"></script>
+
     <script src="scripts/turn.service.js"></script>
     <script src="scripts/turn.controller.js"></script>
 
@@ -26,19 +28,17 @@
 </head>
 
 <body>
-<!-- <body ng-controller="PlayerController as player"> -->
 
 <ng-view></ng-view>
 
 <div class="static">
-    <div id="pages-box">
 
+  <div id="pages-box">
 <ul class="page-list">
   <li id=""><a href="/home">Home</a></li>
   <li id="players"><a href="/playerspage">Players</a></li>
   <li id="rules"><a href="/rules">Rules</a></li>
   <li id="game"><a href="/game">Mini Game</a></li>
-
 </ul>
 
 <ul class="page-list">
@@ -46,14 +46,12 @@
   <li id="candy"><a href="/candy">Candy</a></li>
   <li id="casino"><a href="/casino">Casino</a></li>
   <li id="bowser"><a href="/bowser">Bowser</a></li>
-
 </ul>
   </div>
 
 
+
   <div id="counter-box" ng-controller="IndexController as player">
-
-
 
     <!-- ====== COUNTER TABLE ====== -->
 <table id="counter">
@@ -109,14 +107,16 @@
     <td><input type="number" ng-model="player.playersArray[3].coins"/></td>
     <td><input type="number" ng-model="player.playersArray[3].stars"/></td>
   </tr>
-
 </table>
 
 <!-- ====== TURN NUMBER DISPLAY ====== -->
 <div id="turn-counter" ng-controller="TurnController as turn">
   <div id="game-turn">
-  <label for="turn-count">Turn:</label><br />
+  <label for="turn-count">Turns remaining:</label><br />
   <input type="number" ng-model="turn.turnsArray[0].turn_num" />
+  <!-- <input type="number" ng-model="player.playersArray[0].minigame + player.playersArray[1].minigame + player.playersArray[2].minigame + player.playersArray[3].minigame + 1" /> -->
+
+<!-- {{player.playersArray[0].minigame + player.playersArray[1].minigame + player.playersArray[2].minigame + player.playersArray[3].minigame + 1}} -->
     </div>
 
   <button id="next-player" ng-click="player.updateCounter(player.playersArray); turn.updateTurn(turn.turnsArray)">Save</button>
@@ -129,34 +129,19 @@
 <table id="standings-table">
 
 <tr id="standings" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">
-  <td>
-    <img id="standings-char" src="{{player.character}}" /></td>
+    <td><img id="standings-char" src="{{player.character}}" /></td>
     <td>{{player.name}}</td>
+    <td><img src="../assets/images/star.png" />{{player.stars}}</td>
     <td><img src="../assets/images/coin.png" />{{player.coins}}</td>
-    <td><img src="../assets/images/star.png" />{{player.stars}}
-  </li>
 </tr>
-
 </table>
 
-<!-- <table id="standings-table">
-  <tr ng-repeat="player in player.playersArray | orderBy:{{player.playersArray.stars}}">
-    <td scope="row"><img src="{{player.playersArray.character}}" /></td>
-    <td scope="row">{{player.playersArray.name}}</td>
-    <td scope="row"><img src="../assets/images/coin.png" />{{player.playersArray.coins}}</td>
-    <td scope="row"><img src="../assets/images/star.png" />{{player.playersArray.stars}}</td>
-  </tr>
-</table> -->
 
-</div>
-
+</div> <!-- end CURRENT TURN -->
 
   </div> <!-- end COUNTER BOX -->
-
-
 
 </div> <!-- end STATIC -->
 
 </body>
-
 </html>

@@ -3,13 +3,12 @@
 ## Priorities -----
 
 - Convert jQuery logic into Angular Controllers
-  - Complete by Wednesday
 
 - Create 2+ new Special Spaces
 
 - Overhaul mini-game page
   - Display game box cover image
-    - Complete by Thurs
+  - Multiple pages, walk-through
 
 - Rewrite and consolidate CSS
   - Create separate styling pages?
@@ -24,8 +23,8 @@
 
 - Better styling
   - Button "push" clicks
-  - Clean up pages
-  - Fix background colors
+  - Clean up pages [COMPLETED]
+  - Fix background colors [COMPLETED]
 
 ## Stretch -----
 - Create animations
@@ -33,22 +32,10 @@
   - Page transitions
   - Change counter box background based on player turn
 
-- Create "New Game" function
+- Create "New Game" function [COMPLETED]
 
-- Store counter info in table
+- Store counter info in table [COMPLETED]
 
-
-## Completed -----
-- Convert to server format [10/31]
-
-- Reorganize everything into folders [10/31]
-
-- Convert site to Angular Routing format [10/31]
-
-- Create static footer [10/31]
-  - Contains:
-    - Index pages
-    - Counter table
 
 ## Tech used --------
 - HTML5

@@ -123,7 +123,7 @@ a:focus {
 /* ------------------- PAGES ------------------- */
 #pages-box {
   width: 33%;
-  background-color: #74fcbc;
+  background: linear-gradient(#73dddc, #4ba8a6);
   height: 100%;
   float: left;
 }
@@ -149,7 +149,7 @@ a:focus {
 /* ------------------- COUNTER ------------------- */
 #counter-box {
   width: 67%;
-  background-color: #2dad71;
+  background: linear-gradient(#32c188, #5fe8b1);
   height: 100%;
   float: left;
   border-left: 5px outset;
@@ -243,7 +243,7 @@ button:focus {
 #game-turn label {
   text-align: center;
   font-family: 'Mario';
-  font-size: 10px;
+  font-size: 8px;
 }
 #game-turn input {
   font-size: 36px;
@@ -295,6 +295,7 @@ button:focus {
 #current-player {
 }
 
+
 /* ------------------- STANDINGS ------------------- */
 #standings {
   list-style-type: none;
@@ -307,14 +308,17 @@ button:focus {
   text-align: center;
   margin-bottom: 0;
   font-size: 10px;
-  background: linear-gradient(grey, white);
+  /*background: linear-gradient(#e85c71, #efefef);*/
+  background-color: #e85c71;
+  color: #72deff
+;
 }
 #standings img {
   height: 27px;
 }
-#standings-char img{
-  height: 40px;
-}
+/*#standings-char img{
+  height: 50px;
+}*/
 #standings li {
   border-bottom: 1px solid black;
 }
@@ -336,7 +340,15 @@ button:focus {
   background: none;
   padding: 0;
   margin: 0;
+  text-align: left;
 }
+#standings-table tr:nth-child(odd) {
+  background-color: #efefef;
+}
+#standings-table tr:nth-child(even) {
+  background-color: #cecece;
+}
+
 
 /* ------------------- HOME PAGE ------------------- */
 #home-page {
@@ -572,7 +584,9 @@ button:focus {
   background-color: #b23030;
   color: white;
 }
-
+#players {
+  background-color: #efe52d;
+}
 
 /* ------------------- COUNTER PAGE ------------------- */
 
