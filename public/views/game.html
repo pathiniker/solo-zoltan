@@ -2,17 +2,18 @@
 
 <div class="game-col-1" ng-controller="PlayerController as player">
 
-  <h5>Game Type</h5>
+  <h5>1. Game Type</h5>
   <button ng-click="game.selectType()">Select type</button>
- {{game.gameType}}
-  <h5>Select Game</h5>
-  <button ng-click="game.randTwo()">Get Random 2v2</button>
-  {{game.twoSelect.title}}
-<br />
-  <button ng-click="game.randFFA()">Get Random FFA</button>
-  {{game.ffaSelect.title}}
+ <p id="game-result">{{game.gameType}}</p>
+  <h5>2. Select Game</h5>
+  <button ng-click="game.randFFA()">Free for All</button>
+   <p id="game-result">{{game.ffaSelect.title}}</p>
+  <br />
+  <button ng-click="game.randTwo()">Two vs Two</button>
+   <p id="game-result">{{game.twoSelect.title}}</p>
 
-  <h5>Select Teams</h5>
+
+  <h5>3. Select Teams</h5>
   <button ng-click="player.getTeams()">Pick Teams</button>
 <!-- <ul>
   <li>{{player.teamPlayerOne.name}}</li>
@@ -22,23 +23,33 @@
   <li>{{player.teamPlayerFour.name}}</li>
 </ul> -->
 <br />
-<div id="team-player">
+<div id="team-one">
+
+
+<div class="team-player" id="team-one-player">
   <img src="{{player.teamPlayerOne.character}}" />
   <br />{{player.teamPlayerOne.name}}
 </div>
-<div id="team-player">
+<div class="team-player" id="team-one-player">
   <img src="{{player.teamPlayerTwo.character}}" />
 <br />  {{player.teamPlayerTwo.name}}
 </div>
-VS
-<div id="team-player">
+</div>
+<div id="vs">
+  <p>VS</p>
+</div>
+<div id="team-two">
+
+<div class="team-player" id="team-two-player">
   <img src="{{player.teamPlayerThree.character}}" />
 <br />  {{player.teamPlayerThree.name}}
 </div>
-<div id="team-player">
+<div class="team-player" id="team-two-player">
   <img src="{{player.teamPlayerFour.character}}" />
 <br />  {{player.teamPlayerFour.name}}
 </div>
+</div>
+
 
 
 </div> <!-- end col-1 -->
@@ -47,7 +58,7 @@ VS
 
 
 <div class="game-col-2">
-    <img src="{{game.twoSelect.cover}}" /><br />
+<img src="{{game.twoSelect.cover}}" /><br />
 <img src="{{game.ffaSelect.cover}}" />
 </div>
 

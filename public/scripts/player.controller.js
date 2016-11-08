@@ -3,7 +3,6 @@ app.controller('PlayerController', PlayerController);
 
 function PlayerController($http, playerService){
   var player = this;
-  console.log('PlayerController loaded');
 
 player.mario = '../assets/images/mario.png';
 player.luigi = '../assets/images/luigi.png';

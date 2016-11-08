@@ -4,7 +4,6 @@ app.controller('MiniGameController', MiniGameController);
 function MiniGameController($http, chanceService){
 
   var game = this;
-  console.log('MiniGameController loaded');
 
   game.ffaArray = [];
   game.ffa = {};
@@ -12,10 +11,11 @@ function MiniGameController($http, chanceService){
   game.twoArray = [];
   game.two = {};
 
-  game.ffaSelect = {};
-  game.twoSelect = {};
+  game.ffaSelect = '';
+  game.twoSelect = '';
 
   game.gameType = '';
+  var gameRoll = '';
 
   game.getFFA = function(allFFA){
     chanceService.getFFA(allFFA)
@@ -47,10 +47,10 @@ function MiniGameController($http, chanceService){
         return Math.floor(Math.random() * (max - min) + min);
     }
 
-    if (gameRoll === 1) {
-      gameRoll == 'Free For All';
-    } else if (gameRoll === 2) {
-      gameRoll == 'Two VS Two';
+    if (gameRoll == 1) {
+      gameRoll = 'Free For All';
+    } else if (gameRoll == 2) {
+      gameRoll = 'Two VS Two';
     }
     game.gameType = gameRoll;
   } // end selectType

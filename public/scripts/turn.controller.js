@@ -3,7 +3,6 @@ app.controller('TurnController', TurnController);
 
 function TurnController($http, turnService){
   var turn = this;
-  console.log('TurnController loaded');
 
   turn.turnsArray = [];
   turn.turn = {};
@@ -13,7 +12,6 @@ function TurnController($http, turnService){
         .then(function(response){
           turn.turnsArray = response;
 
-          console.log('Current turn:', response);
         });
   };
 

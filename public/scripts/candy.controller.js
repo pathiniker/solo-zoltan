@@ -3,7 +3,6 @@ app.controller('CandyController', CandyController);
 
 function CandyController($http, chanceService){
   var candy = this;
-  console.log('CandyController loaded');
 
 
   candy.candyArray = [];
@@ -41,7 +40,7 @@ function CandyController($http, chanceService){
     console.log(candy.stockTwo);
     console.log(candy.stockThree);
 
-    
+
 
   } // end pickThree
 

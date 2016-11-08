@@ -3,7 +3,6 @@ app.controller('IndexController', IndexController);
 
 function IndexController($http, playerService){
   var player = this;
-  console.log('IndexController loaded');
 
 
   player.playersArray = [];
@@ -14,8 +13,6 @@ function IndexController($http, playerService){
       playerService.getPlayers(allPlayers)
         .then(function(response){
           player.playersArray = response;
-
-          console.log(player.playersArray);
 
         });
     }
@@ -31,8 +28,6 @@ function IndexController($http, playerService){
 
     player.getPlayers();
 
-// ------ NEXT PLAYER ------ //
-console.log('logging array', player.playersArray);
 
 
 

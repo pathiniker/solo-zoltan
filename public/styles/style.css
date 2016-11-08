@@ -676,7 +676,23 @@ button:focus {
 #game-page-color {
   background: linear-gradient(tomato, #681905);
 }
-
+#game-page-color button {
+  height: 20px;
+  width: 100px;
+  background-color: lightgreen;
+}
+#game-page-color h5 {
+  text-align: center;
+}
+#game-result {
+  color: white;
+  padding: 0;
+  margin: 0;
+  margin-right: 10px;
+  display: inline;
+  font-family: Arial;
+  font-size: 15px;
+}
 .game-col-1 {
   float: left;
   width: 30%;
@@ -684,13 +700,49 @@ button:focus {
   height: 1000px;
   border-right: 5px inset;
 }
-#team-player {
-  display: inline-block;
+.team-player img {
+  margin: auto;
+  width: 50%;
+  margin-left: 20px;
 }
-.game-col-1 img {
+.team-player {
+  margin-bottom: 30px;
+  text-align: center;
+  border-radius: 30px;
+  color: white;
+  font-family: 'Mario';
+  font-size: 10px;
+}
+
+#team-one {
+  float: left;
+  width: 40%;
+}
+#team-two {
+  float: right;
+  width: 40%;
+}
+#vs {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+#vs p {
+  margin-top: 150px;
+  color: #4bf248;
+  font-size: 20px;
+}
+#team-one-player {
+  border-bottom: 5px solid #3beaf9
+;
+}
+#team-two-player {
+  border-bottom: 5px solid #f24848;
+}
+/*.game-col-1 img {
   height: 50px;
   display: inline-block;
-}
+}*/
 .game-col-2 {
   float: left;
   width: 70%;
@@ -699,6 +751,8 @@ button:focus {
 .game-col-2 img {
   float: right;
   height: 450px;
+  border-radius: 15px;
+  border: 5px outset;
   /*margin-right: 100px;*/
 }
 

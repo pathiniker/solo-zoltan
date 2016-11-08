@@ -3,7 +3,6 @@ app.controller('GreenController', GreenController);
 
 function GreenController($http){
   var green = this;
-  console.log('GreenController loaded');
 
   green.spin = '';
 
