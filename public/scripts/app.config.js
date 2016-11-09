@@ -18,6 +18,7 @@ angular.module('routeApp')
             controller: 'CasinoController as slot',
           }).when('/bowser', {
             templateUrl: 'views/bowser.html',
+            controller: 'BowserController as bowser',
           }).when('/newgame', {
             templateUrl: 'views/newgame.html',
             controller: 'PlayerController as player',

@@ -1154,6 +1154,18 @@ th {
 #bowser-page {
   background: radial-gradient(#701a1a, black);
 }
+#bowser-table img {
+  height: 50px;
+}
+#bowser-table p {
+  font-size: 30px;
+}
+#bowser-player p{
+  font-size: 10px;
+}
+#bowser-player img {
+  height: 120px;
+}
 #b-left {
   width: 30%;
   float: left;

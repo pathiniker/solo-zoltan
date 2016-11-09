@@ -88,3 +88,9 @@
   - Coverted "green" page to Angular
   - Created 'chance' route and service
   - Storing 'candy' in database
+
+- [Wed 11/9]
+  - Casino fully functioning in Angular!!!
+  - Jackpot amount stores in SQL
+  - Bowser slot machine fully functioning in Angular
+  - ALL jQUERY OFFICIALLY CONVERTED TO ANGULAR SON

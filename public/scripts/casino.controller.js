@@ -21,7 +21,6 @@ var slot = this;
   slot.payout = 0;
 
 
-
   slot.getSlot = function(allSlots){
     chanceService.getSlot(allSlots)
       .then(function(response){
