@@ -13,8 +13,8 @@
   <img id="yoshi" src="../assets/images/yoshi.png" height="420px"/>
 <span id="yahtzeeWin"></span>
 
-
-<div class="slot-machine">
+<!-- OLD SLOT MACHINE -->
+<!-- <div class="slot-machine">
 
 <button id="reset">Insert coin</button>
 
@@ -66,7 +66,69 @@
 <br>
 <button class="spinbutton" id="spin">Spin!</button>
 
+</div> -->
+
+
+<!-- === NEW SLOT MACHINE === -->
+<div class="slot-machine">
+<button id="reset" ng-click="slot.insertCoin()">Insert coin</button>
+
+
+  <table class="slotprizes">
+    <tr>
+      <td><img src="../assets/images/star.png" height="25px"><img src="../assets/images/star.png" height="25px"><img src="../assets/images/star.png" height="25px"></td>
+      <td>Jackpot</td>
+    </tr>
+    <tr>
+      <td><img src="../assets/images/yoshiegg.png" height="25px"><img src="../assets/images/yoshiegg.png" height="25px"><img src="../assets/images/yoshiegg.png" height="25px"></td>
+      <td><img src="../assets/images/coin.png" height="25px"><img src="../assets/images/coin.png" height="25px"></td>
+    </tr>
+    <tr>
+      <td><img src="../assets/images/block3.png" height="25px"><img src="../assets/images/block3.png" height="25px"><img src="../assets/images/block3.png" height="25px"></td>
+      <td><img src="../assets/images/coin.png" height="25px"></td>
+    </tr>
+</table>
+
+
+
+
+<table class="stats">
+  <tr>
+    <td>Jackpot:</td>
+    <td>{{slot.jackpotArray[0].amount}}</td>
+  </tr>
+  <!-- <tr>
+    <td>Plays:</td>
+    <td><span id="total-plays">-</span></td>
+  </tr> -->
+  <tr>
+    <td>Spins:</td>
+    <td>{{slot.spins}}</td>
+  </tr>
+  <tr>
+    <td>Payout:</td>
+    <td>{{slot.payout}}</td>
+  </tr>
+  <tr>
+    <td>Result:</td>
+    <td>{{slot.spinResult}}</td>
+  </tr>
+</table>
+
+
+<table class="yahtzee">
+  <tr>
+    <td><img src="{{slot.resOne.image}}" /></td>
+    <td><img src="{{slot.resTwo.image}}" /></td>
+    <td><img src="{{slot.resThree.image}}" /></td>
+  </tr>
+</table>
+
+<br>
+<button class="spinbutton" id="spin" ng-click="slot.spinSlots()">Spin!</button>
+
 </div>
+
 
 
 

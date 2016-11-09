@@ -20,7 +20,7 @@
   </select>
 
   <!-- <button type="submit" id="ready" ng-click="player.createPlayer(player.playerOne)">Add P1</button> -->
-  <div id="new-character"><img src="{{player.playerOne.character}}" /></div>
+  <div id="new-character"><img ng-if="player.playerOne.character" ng-src="{{player.playerOne.character}}" /></div>
 </form>
 
 
@@ -40,7 +40,7 @@
   </select>
 
   <!-- <button type="submit" id="ready" ng-click="player.createPlayer(player.playerTwo)">Add P2</button> -->
-  <div id="new-character"><img src="{{player.playerTwo.character}}" /></div>
+  <div id="new-character"><img ng-if="player.playerTwo.character" ng-src="{{player.playerTwo.character}}" /></div>
 </form>
 
 <form>
@@ -56,7 +56,7 @@
   </select>
 
   <!-- <button type="submit" id="ready" ng-click="player.createPlayer(player.playerThree)">Add P3</button> -->
-  <div id="new-character"><img src="{{player.playerThree.character}}" /></div>
+  <div id="new-character"><img ng-if="player.playerThree.character" ng-src="{{player.playerThree.character}}" /></div>
 </form>
 
 <form>
@@ -72,7 +72,7 @@
   </select>
 
   <!-- <button type="submit" id="ready" ng-click="player.createPlayer(player.playerFour)">Add P4</button> -->
-  <div id="new-character"><img src="{{player.playerFour.character}}" /></div>
+  <div id="new-character"><img ng-if="player.playerFour.character" ng-src="{{player.playerFour.character}}" /></div>
 
 </form>
 </div> <!-- END CHAR FORMS -->

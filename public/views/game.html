@@ -27,11 +27,11 @@
 
 
 <div class="team-player" id="team-one-player">
-  <img src="{{player.teamPlayerOne.character}}" />
+  <img ng-if="player.teamPlayerOne.character" ng-src="{{player.teamPlayerOne.character}}" />
   <br />{{player.teamPlayerOne.name}}
 </div>
 <div class="team-player" id="team-one-player">
-  <img src="{{player.teamPlayerTwo.character}}" />
+  <img ng-if="player.teamPlayerTwo.character" ng-src="{{player.teamPlayerTwo.character}}" />
 <br />  {{player.teamPlayerTwo.name}}
 </div>
 </div>
@@ -41,11 +41,11 @@
 <div id="team-two">
 
 <div class="team-player" id="team-two-player">
-  <img src="{{player.teamPlayerThree.character}}" />
+  <img ng-if="player.teamPlayerThree.character" ng-src="{{player.teamPlayerThree.character}}" />
 <br />  {{player.teamPlayerThree.name}}
 </div>
 <div class="team-player" id="team-two-player">
-  <img src="{{player.teamPlayerFour.character}}" />
+  <img ng-if="player.teamPlayerFour.character" ng-src="{{player.teamPlayerFour.character}}" />
 <br />  {{player.teamPlayerFour.name}}
 </div>
 </div>
@@ -58,8 +58,8 @@
 
 
 <div class="game-col-2">
-<img src="{{game.twoSelect.cover}}" /><br />
-<img src="{{game.ffaSelect.cover}}" />
+<img ng-if="game.twoSelect.cover" ng-src="{{game.twoSelect.cover}}" /><br />
+<img ng-if="game.ffaSelect.cover" ng-src="{{game.ffaSelect.cover}}" />
 </div>
 
 <!-- <table>

@@ -18,8 +18,8 @@ function IndexController($http, playerService){
     }
 
     player.updateCounter = function(allCount){
-      allCount.forEach(function(players){
-        playerService.updateCounter(players)
+      allCount.forEach(function(newAmount){
+        playerService.updateCounter(newAmount)
           .then(function(){
             player.getPlayers();
           });

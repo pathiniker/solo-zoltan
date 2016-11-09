@@ -15,6 +15,7 @@ angular.module('routeApp')
             controller: 'CandyController as candy',
           }).when('/casino', {
             templateUrl: 'views/casino.html',
+            controller: 'CasinoController as slot',
           }).when('/bowser', {
             templateUrl: 'views/bowser.html',
           }).when('/newgame', {
@@ -25,6 +26,9 @@ angular.module('routeApp')
             controller: 'IndexController as player',
           }).when('/confirm', {
             templateUrl: 'views/confirm.html',
+            controller: 'PlayerController as player',
+          }).when('/standings', {
+            templateUrl: 'views/standings.html',
             controller: 'PlayerController as player',
           }).otherwise({
             redirectTo: '/home',

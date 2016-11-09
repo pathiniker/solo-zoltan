@@ -23,28 +23,21 @@ function CandyController($http, chanceService){
 
   candy.getCandy();
 
-
   candy.pickThree = function(){
     candy.stockOne = candy.candyArray[Math.floor(Math.random()* candy.candyArray.length)];
     candy.stockTwo = candy.candyArray[Math.floor(Math.random()* candy.candyArray.length)];
     candy.stockThree = candy.candyArray[Math.floor(Math.random()* candy.candyArray.length)];
 
-    if (candy.stockTwo == candy.stockOne) {
+    while (candy.stockTwo === candy.stockOne){
       candy.stockTwo = candy.candyArray[Math.floor(Math.random()* candy.candyArray.length)];
     }
-    if (candy.stockThree == candy.stockTwo || candy.stockThree == candy.stockOne){
+    while (candy.stockThree === candy.stockOne || candy.stockThree === candy.stockTwo){
       candy.stockThree = candy.candyArray[Math.floor(Math.random()* candy.candyArray.length)];
     }
-
-    console.log(candy.stockOne);
-    console.log(candy.stockTwo);
-    console.log(candy.stockThree);
-
 
 
   } // end pickThree
 
-  candy.pickThree();
 
 
 

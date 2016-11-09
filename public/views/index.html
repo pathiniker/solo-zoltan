@@ -24,10 +24,12 @@
     <script src="scripts/candy.controller.js"></script>
     <script src="scripts/minigame.controller.js"></script>
     <script src="scripts/green.controller.js"></script>
+    <script src="scripts/casino.controller.js"></script>
 
 
     <!-- <link rel="stylesheet" href="vendors/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
 
     <base href="/" />
 </head>
@@ -130,7 +132,7 @@
 
 <!-- ====== CURRENT PLAYER DISPLAY ====== -->
 <div id="current-turn">
-<h5>Standings</h5>
+<h5><a href="/standings">Standings</a></h5>
 <table id="standings-table">
 
 <tr id="standings" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">

@@ -1,0 +1,35 @@
+<div class="content" id="standings-page">
+
+<div id="standings-left">
+
+
+  <table class="standings-page-table" id="standings-left-table">
+  <tr id="standings" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins'] | limitTo: 2 ">
+      <td id="standings-page-char"><img src="{{player.character}}" /></td>
+      <td>{{player.name}}</td>
+      <td><img src="../assets/images/star.png" />{{player.stars}}</td>
+      <td><img src="../assets/images/coin.png" />{{player.coins}}</td>
+  </tr>
+  </table>
+</div>
+<div id="standings-right">
+
+
+  <table class="standings-page-table" id="standings-right-table">
+  <tr id="standings" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins'] | limitTo: -2 ">
+      <td id="standings-page-char"><img src="{{player.character}}" /></td>
+      <td>{{player.name}}</td>
+      <td><img src="../assets/images/star.png" />{{player.stars}}</td>
+      <td><img src="../assets/images/coin.png" />{{player.coins}}</td>
+  </tr>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+</div> <!-- end STANDINGS PAGE -->

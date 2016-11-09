@@ -592,6 +592,52 @@ button:focus {
   background-color: #efe52d;
 }
 
+
+
+/* ------------------- STANDINGS PAGE ------------------- */
+#standings-page {
+  background: radial-gradient(#33b277, #0c9b58);
+}
+#standings-page table {
+  width: 100%;
+  font-family: 'Mario';
+  font-size: 20px;
+
+}
+#standings-page td {
+  background: none;
+  border: none;
+}
+.standings-page-table img {
+  height: 80px;
+}
+#standings-left {
+  width: 50%;
+  float: left;
+}
+#standings-right {
+  width: 50%;
+  float: left;
+}
+#standings-page-char img {
+  height: 250px;
+}
+#standings-left-table tr:nth-child(1) {
+  background: linear-gradient(#fcbf46, #e5c179, #ce982b);
+}
+#standings-left-table tr:nth-child(2) {
+  background: linear-gradient(#b7b3ac, #e5e4e3, #848484);
+}
+#standings-right-table tr:nth-child(1) {
+  background: linear-gradient(#8c6008, #b28223, #8e6209);
+}
+#standings-right-table tr:nth-child(2) {
+  background: linear-gradient(#0c0c0c, #2d2d2d, #302f2e);
+  color: white;
+}
+
+
+
 /* ------------------- COUNTER PAGE ------------------- */
 
 #namesize {
@@ -674,7 +720,7 @@ button:focus {
 
 /* ------------------- MINI GAME PAGE ------------------- */
 #game-page-color {
-  background: linear-gradient(tomato, #681905);
+  background: radial-gradient(tomato, #681905);
 }
 #game-page-color button {
   height: 20px;
@@ -712,6 +758,8 @@ button:focus {
   color: white;
   font-family: 'Mario';
   font-size: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #team-one {
@@ -750,7 +798,8 @@ button:focus {
 }
 .game-col-2 img {
   float: right;
-  height: 450px;
+  /*height: 450px;*/
+  width: 50%;
   border-radius: 15px;
   border: 5px outset;
   /*margin-right: 100px;*/
@@ -912,6 +961,9 @@ button:focus {
   margin: 0;
   font-size: 70px;
 }
+#yellow {
+  background-color: yellow;
+}
 
 
 
@@ -997,7 +1049,9 @@ button:focus {
   /*background-position: center;
   background-repeat: repeat-x;*/
 }
-
+.yahtzee img {
+  height: 70px;
+}
 .yahtzeeWin {
   position: fixed;
   float: right;

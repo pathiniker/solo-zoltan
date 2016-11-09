@@ -24,6 +24,27 @@ function ChanceService($http){
       });
   };
 
+  this.getSlot = function(allSlots){
+    return $http.get('/slots', allSlots)
+      .then(function(response){
+        return response.data;
+      });
+  };
+
+  this.getJackpot = function(defJackpot){
+    return $http.get('/jackpot', defJackpot)
+      .then(function(response){
+        return response.data;
+      });
+  };
+
+  this.insertCoin = function(newAmount){
+    return $http.put('/jackpot', {amount:newAmount})
+        .then(function(response){
+          return response.data;
+        });
+  };
+
 
 
 
