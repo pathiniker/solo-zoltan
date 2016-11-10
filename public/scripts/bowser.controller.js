@@ -19,6 +19,7 @@ function BowserController($http, playerService){
         bowser.playersArray = response;
       });
   }
+
 bowser.getPlayers();
   bowser.spinFate = function(){
     console.log(bowser.playersArray);

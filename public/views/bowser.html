@@ -7,14 +7,20 @@
 </div>
 
 <div id="b-right">
+  <div id="bowser-box">
+
   <table id="bowser-table">
     <tr>
-      <td><img ng-if="bowser.giveTake" ng-src="{{bowser.giveTake}}" /></td>
-      <td><p ng-if="bowser.coins">{{bowser.coins}}<img src="../assets/images/coin.png" /></p></td>
+      <td id="give-take"><img ng-if="bowser.giveTake" ng-src="{{bowser.giveTake}}" /></td>
+      <td id="b-coins"><p ng-if="bowser.coins" >{{bowser.coins}}<img src="../assets/images/coin.png" /></p></td>
       <td id="bowser-player"><p><img ng-if="bowser.player.character" ng-src="{{bowser.player.character}}" /><br />{{bowser.player.name}}</p></td>
     </tr>
+
   </table>
   <button id="bowser-button" ng-click="bowser.spinFate()">Spin!</button>
+
+</div>
+
 
 
 </div>

@@ -7,7 +7,7 @@
 
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="vendors/angular-route.min.js" charset="utf-8"></script>
-    <script src="vendors/jquery.min.js"></script>
+    <!-- <script src="vendors/jquery.min.js"></script> -->
     <!-- <script src="scripts/app.js"></script> -->
 
     <script src="scripts/app.module.js" charset="utf-8"></script>
@@ -64,7 +64,6 @@
     <!-- ====== COUNTER TABLE ====== -->
 <table id="counter">
   <form>
-
   <tr>
     <th></th>
     <th id="name-fill">Name</th>
@@ -134,15 +133,26 @@
 <!-- ====== CURRENT PLAYER DISPLAY ====== -->
 <div id="current-turn">
 <h5><a href="/standings">Standings</a></h5>
-<table id="standings-table">
 
-<tr id="standings" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">
-    <td><img id="standings-char" src="{{player.character}}" /></td>
-    <td>{{player.name}}</td>
-    <td><img src="../assets/images/star.png" />{{player.stars}}</td>
-    <td><img src="../assets/images/coin.png" />{{player.coins}}</td>
-</tr>
+<!-- <table id="index-standing-table">
+  <tr>
+    <td id="index-standing-rank" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">
+      {{player.name}}
+      <img id="standings-char" src="{{player.character}}" />
+    </td>
+  </tr>
+</table> -->
+<table id="index-standing-table">
+  <td ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">
+    <div id="index-standing">
+      <img src="{{player.character}}" /><br />
+      <p>{{player.name}}</p><br />
+      <p id="star-left"><img src="../assets/images/star.png" />{{player.stars}}</p>
+      <p id="coin-right"><img src="../assets/images/coin.png" />{{player.coins}}</p>
+    </div>
+  </td>
 </table>
+
 
 
 </div> <!-- end CURRENT TURN -->

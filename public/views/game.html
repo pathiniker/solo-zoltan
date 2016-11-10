@@ -15,15 +15,9 @@
 
   <h5>3. Select Teams</h5>
   <button ng-click="player.getTeams()">Pick Teams</button>
-<!-- <ul>
-  <li>{{player.teamPlayerOne.name}}</li>
-  <li>{{player.teamPlayerTwo.name}}</li>
-  <li>VS</li>
-  <li>{{player.teamPlayerThree.name}}</li>
-  <li>{{player.teamPlayerFour.name}}</li>
-</ul> -->
+
 <br />
-<div id="team-one">
+<div id="team-one" ng-if="player.teamPlayerOne.character">
 
 
 <div class="team-player" id="team-one-player">
@@ -35,10 +29,10 @@
 <br />  {{player.teamPlayerTwo.name}}
 </div>
 </div>
-<div id="vs">
+<div id="vs" ng-if="player.teamPlayerOne.character">
   <p>VS</p>
 </div>
-<div id="team-two">
+<div id="team-two" ng-if="player.teamPlayerOne.character">
 
 <div class="team-player" id="team-two-player">
   <img ng-if="player.teamPlayerThree.character" ng-src="{{player.teamPlayerThree.character}}" />
@@ -58,8 +52,13 @@
 
 
 <div class="game-col-2">
-<img ng-if="game.twoSelect.cover" ng-src="{{game.twoSelect.cover}}" /><br />
-<img ng-if="game.ffaSelect.cover" ng-src="{{game.ffaSelect.cover}}" />
+  <div id="game-sub-1"></div>
+  <div id="game-sub-2">
+    <img ng-if="game.twoSelect.cover" ng-src="{{game.twoSelect.cover}}" />
+    <img ng-if="game.ffaSelect.cover" ng-src="{{game.ffaSelect.cover}}" />
+  </div>
+  <div id="game-sub-3"></div>
+
 </div>
 
 <!-- <table>

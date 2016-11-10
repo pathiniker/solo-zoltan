@@ -11,60 +11,19 @@
 </div>
 
 <div id="candy-col-3">
-    <!-- <table class="candies">
-        <tr>
-            <td id="red-candy"><img src="../assets/images/candy.png"></td>
-            <td id="candy-descrip">Jump to another player</td>
-            <td id="candy-cost"><img src="../assets/images/coin.png"></td>
-        </tr>
-        <tr>
-            <td id="yellow-candy"><img src="../assets/images/candy.png"></td>
-            <td id="candy-descrip">Swap places with another player</td>
-            <td id="candy-cost"><img src="../assets/images/coin.png"><img src="../assets/images/coin.png"></td>
-        </tr>
-        <tr>
-            <td id="green-candy"><img src="../assets/images/candy.png"></td>
-            <td id="candy-descrip">Battle first player passed</td>
-            <td id="candy-cost"><img src="../assets/images/coin.png"><img src="../assets/images/coin.png"></td>
-        </tr>
-        <tr>
-            <td id="white-candy"><img src="../assets/images/candy.png"></td>
-            <td id="candy-descrip">Steal <img src="../assets/images/coin.png"><img src="../assets/images/coin.png"> from each player passed</td>
-            <td id="candy-cost"><img src="../assets/images/coin.png"></td>
-        </tr>
-        <tr>
-            <td id="black-candy"><img src="../assets/images/candy.png"></td>
-            <td id="candy-descrip">Roll 3 dice</td>
-            <td id="candy-cost"><img src="../assets/images/coin.png"><img src="../assets/images/coin.png"></td>
-        </tr>
-        <tr>
-            <td id="blue-candy"><img src="../assets/images/candy.png"></td>
-            <td id="candy-descrip">Change location of <img src="../assets/images/star.png"></td>
-            <td id="candy-cost"><img src="../assets/images/coin.png"><img src="../assets/images/coin.png"><img src="../assets/images/coin.png"></td>
-        </tr>
-    </table> -->
-
-    <!-- <table class="candies">
-      <button ng-click="candy.pickThree()"></button>
-      <tr ng-repeat="candy in candy.candyArray">
-        <td class="candy-color" id="{{candy.color}}"><img src="../assets/images/candy.png" /></td>
-        <td id="candy-descrip">{{candy.description}}</td>
-        <td id="candy-cost">{{candy.price}}<img src="../assets/images/coin.png" /></td>
-      </tr>
-    </table> -->
 
     <table class="candies">
-      <tr>
+      <tr ng-if="candy.stockOne.color">
         <td class="candy-color" id="{{candy.stockOne.color}}"><img src="../assets/images/candy.png" /></td>
         <td id="candy-descrip">{{candy.stockOne.description}}</td>
         <td id="candy-cost">{{candy.stockOne.price}}<img src="../assets/images/coin.png" /></td>
       </tr>
-      <tr>
+      <tr ng-if="candy.stockTwo.color">
         <td class="candy-color" id="{{candy.stockTwo.color}}"><img src="../assets/images/candy.png" /></td>
         <td id="candy-descrip">{{candy.stockTwo.description}}</td>
         <td id="candy-cost">{{candy.stockThree.price}}<img src="../assets/images/coin.png" /></td>
       </tr>
-      <tr>
+      <tr ng-if="candy.stockThree.color">
         <td class="candy-color" id="{{candy.stockThree.color}}"><img src="../assets/images/candy.png" /></td>
         <td id="candy-descrip">{{candy.stockThree.description}}</td>
         <td id="candy-cost">{{candy.stockThree.price}}<img src="../assets/images/coin.png" /></td>
