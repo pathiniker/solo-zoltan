@@ -134,14 +134,6 @@
 <div id="current-turn">
 <h5><a href="/standings">Standings</a></h5>
 
-<!-- <table id="index-standing-table">
-  <tr>
-    <td id="index-standing-rank" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">
-      {{player.name}}
-      <img id="standings-char" src="{{player.character}}" />
-    </td>
-  </tr>
-</table> -->
 <table id="index-standing-table">
   <td ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">
     <div id="index-standing">

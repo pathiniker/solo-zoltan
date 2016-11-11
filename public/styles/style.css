@@ -306,6 +306,14 @@ button:focus {
   height: 100%;
   /*background: radial-gradient(#f4f4f4, #55eda3);*/
 }
+#current-turn h5 {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 7px;
+  /*background: linear-gradient(#e85c71, #efefef);*/
+  background: linear-gradient(#a0a0a0, #c9c9c9, #a0a0a0);
+  color: #846a23;
+}
 #index-standing img {
   height: 80px;
 }
@@ -321,6 +329,7 @@ button:focus {
 }
 #index-standing-table td {
   border: none;
+  width: 25%;
 }
 #index-standing p {
   margin: 0;
@@ -332,17 +341,16 @@ button:focus {
 }
 
 #index-standing-table td:nth-child(1) {
-  background: linear-gradient(#fcbf46, #e5c179, #ce982b);
+  background: radial-gradient(#fcbf46, #e5c179, #ce982b);
 }
 #index-standing-table td:nth-child(2) {
-  background: linear-gradient(#b7b3ac, #e5e4e3, #848484);
+  background: radial-gradient(#b7b3ac, #e5e4e3, #848484);
 }
 #index-standing-table td:nth-child(3) {
-  background: linear-gradient(#8c6008, #b28223, #8e6209);
+  background: radial-gradient(#8c6008, #b28223, #8e6209);
 }
 #index-standing-table td:nth-child(4) {
-  background: linear-gradient(#0c0c0c, #2d2d2d, #302f2e);
-  color: white;
+  background: radial-gradient(#0c0c0c, #2d2d2d, #302f2e);
 }
 #index-standing-table td:nth-child(4) p {
   color: white;
@@ -367,15 +375,7 @@ button:focus {
   text-align: left;
   margin-left: 5px;
 }
-#current-turn h5 {
-  text-align: center;
-  margin-bottom: 0;
-  font-size: 10px;
-  /*background: linear-gradient(#e85c71, #efefef);*/
-  background-color: #e85c71;
-  color: #72deff
-;
-}
+
 #standings img {
   height: 27px;
 }
@@ -398,13 +398,7 @@ button:focus {
 #current-turn table {
   margin-left: 0px;
 }
-#standings-table td {
-  border: none;
-  background: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
+
 
 
 
@@ -486,10 +480,13 @@ button:focus {
 }
 #newgame-page form {
   background: radial-gradient(#FFFFFF, #d8d8d8);
-  margin-top: 10px;
   height: 60px;
   padding-top: 20px;
   min-width: 550px;
+  width: 70%;
+  margin: auto;
+  margin-top: 10px;
+
   border-radius: 15px 15px 0 0;
   border-top: 3px outset;
   border-left: 2px outset;
@@ -505,7 +502,7 @@ button:focus {
 }
 #char-select {
   margin: 30px auto;
-  width: 75%;
+  width: 60%;
   color: white;
   text-align: center;
   background: linear-gradient(#27998b, #1b617c);
@@ -564,38 +561,56 @@ button:focus {
 
 /* ------------------- PLAYERS PAGE --------------------- */
 #players-page {
-  background: linear-gradient(#efe52d, #ff7221);
+  background: radial-gradient(#29cebe, #13d823);
+}
+#all-players {
+  margin-top: 5%;
+
 }
 .player-display {
-  height: 340px;
+  height: 40%;
   width: 20%;
   float: left;
   background: linear-gradient(#103063, #451782);
-  margin: 15px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
   border: 5px inset;
   border-radius: 15px;
   box-shadow: 0 25px 10px -10px purple;
 }
-.player-display img {
-  height: 200px;
-  margin-left: 50px;
+.player-display img:nth-child(1) {
+  height: 300px;
+  margin: auto;
   padding-top: 10px;
+  padding-left: 25%;
+  padding-right: 5%;
   /*background: radial-gradient(#FFFFFF, #451782);
   border-radius: 100%;*/
 }
-.player-display p {
-  margin-bottom: 50px;
-  font-size: 14px;
-  color: white;
 
+.player-display p:nth-child(1) {
+  margin-bottom: 50px;
+  font-size: 50px;
+  color: white;
 }
-#all-players {
-  margin-top: 80px;
-  margin-left: 120px;
+.player-display p:nth-child(2) {
+  margin-bottom: 50px;
+  font-size: 20px;
+  color: white;
 }
+.player-display p:nth-child(3) {
+  margin-bottom: 50px;
+  font-size: 20px;
+  color: #f2ad37;
+}
+#display-name {
+  font-size: 30px;
+}
+
 #display-small {
   height: 40px;
   margin: auto;
+  margin-top: 5%;
 }
 
 
@@ -741,14 +756,14 @@ button:focus {
 #green-result {
   font-family: 'Mario';
   color: white;
-  font-size: 120px;
+  font-size: 140px;
   background-image: url('../assets/images/block2.png');
   background-size: cover;
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 400px;
 }
 #green-table {
-  margin-left: 30%;
+  margin-left: 36%;
   margin-top: 10%;
 }
 #green-table th {
@@ -769,6 +784,8 @@ button:focus {
 #green-num {
   font-family: 'Mario';
   padding-left: -15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 #green-data {
   padding-left: 10px;
@@ -950,17 +967,21 @@ button:focus {
   background: radial-gradient(#db2e2e, #9188f7);
 }
 #candy-col-1 {
-  width: 25%;
+  width: 35%;
   float: left;
 }
 #candy-col-1 img {
-  height: 400px;
-  margin: 90px auto auto 50px;
+  height: 500px;
+  margin: 30% auto auto 40%;
 }
 #candy-col-2 {
-  width: 20%;
+  width: 10%;
   float: left;
   margin: 80px auto auto auto;
+}
+#candy-col-2 button {
+  margin-top: 40%;
+  width: 100%;
 }
 #candy-col-3 {
   width: 55%;
@@ -968,21 +989,44 @@ button:focus {
   margin-top: 120px;
   padding-left: 100px;
 }
+#candy-col-3 table {
+  width: 90%;
+}
 .candy-color {
   padding: 3px 10px;
 }
 .candies img {
-  height: 30px;
+  height: 90px;
 }
+.candies td:nth-child(1){
+  border-radius: 100%;
+  padding: 5%;
+  border: 5px inset;
+}
+.candies td:nth-child(2){
+  font-size: 30px;
+  border-radius: 15px;
+  background: linear-gradient(#ededed, #cccccc);
+}
+.candies td:nth-child(3){
+  font-size: 40px;
+  border-radius: 15px;
+  font-family: 'Mario';
+  min-width: 150px;
+}
+#candy-cost img {
+  float: right;
+}
+
 #candy-descrip {
-  width: 300px;
+  /*width: 300px;*/
 }
 #candy-cost {
   padding: 3px 10px;
 }
 #choose-candy {
   background-color: white;
-  padding: 15px 10px;
+  padding: 5% 5%;
   border-radius: 15px 15px 15px 0;
 }
 .candy-head th {
@@ -1057,26 +1101,29 @@ button:focus {
 .rules {
     margin: auto;
     float: right;
+    width: 80%;
+    font-size: 20px;
 }
 .rule-col-1 {
   float: left;
-  width: 30%;
+  width: 40%;
   padding: 30px;
 }
 .rule-col-2 {
   float: left;
-  width: 70%;
+  width: 60%;
 }
 #rule-subcol-1 {
   float: left;
-  margin-left: 100px;
+  width: 30%;
 }
 #rule-subcol-2 {
   float: left;
-  margin-left: 100px;
+  width: 60%;
 }
 #ruleDescrip {
-    max-width: 350px;
+    width: 80%;
+    margin-left: 10%;
     border: 2px inset;
     padding: 15px;
     background-color: white;
@@ -1128,18 +1175,79 @@ button:focus {
 /* ------------------- CASINO PAGE ------------------- */
 #casino-page {
   background: radial-gradient(#27d868, #ce5475);
-  /*background-position: center;
-  background-repeat: repeat-x;*/
 }
-.yahtzee img {
+#casino-col-1 {
+  float: left;
+  width: 30%;
+}
+#casino-col-1 img {
+  margin: auto;
+  margin: 25% auto auto 50%;
+  width: 45%;
+}
+#casino-col-2 {
+  float: left;
+  width: 70%;
+}
+#jackpot-display {
+  margin: auto;
+  margin-top: 3%;
+  width: 35%;
   height: 70px;
+  background-color: white;
+  margin-bottom: 0;
+  border-radius: 15px 15px 0 0;
+  border-top: 5px solid #262626;
+  border-left: 5px solid #262626;
+  border-right: 5px solid #262626;
+  background: linear-gradient(#2b2b2b, #3d3d3d);
 }
-.yahtzeeWin {
-  position: fixed;
-  float: right;
+#jackpot-display p {
+  text-align: center;
+  font-family: 'Balls';
+  margin: 0;
 }
+#jackpot-display p:nth-child(1){
+  width: 50%;
+  float: left;
+  font-size: 65px;
+  color: #ef584a;
+}
+#jackpot-display p:nth-child(2){
+  width: 50%;
+  float: left;
+  font-size: 65px;
+  color: white;
+}
+.slot-machine {
+  border: 7px outset;
+  width: 70%;
+  height: 600px;
+  margin: auto;
+  /*margin-top: 5%;*/
+  background-color: #4b4e4f;
+  background-image: url('../assets/images/yoshiback.png');
+  background-position: top;
+  background-size: cover;
+  box-shadow: 10px 10px 10px black;
+}
+
+
+.yahtzee img {
+  height: 90px;
+}
+
 .stats  {
   margin: 10px auto 30px auto;
+  width: 30%;
+}
+.stats td:nth-child(1){
+  width: 40%;
+  padding: 1% 5%;
+  text-align: center;
+}
+.stats tr:nth-child(3) td:nth-child(2){
+  color: #80e23b;
 }
 .stats td {
   font-family: 'Balls';
@@ -1149,47 +1257,31 @@ button:focus {
   border: 2px inset;
 }
 .yahtzee {
+  width: 80%;
+  height: 40%;
   margin: auto;
 }
 .yahtzee td {
-  width: 200px;
-  height: 150px;
-  color: red;
+  width: 33%;
+  /*height: 150px;*/
   border: 10px inset;
   background: linear-gradient(gray, white, gray);
 }
-.slot-machine {
-  border: 7px outset;
-  float: left;
-  width: 700px;
-  height: 500px;
-  margin: auto;
-  background-color: #4b4e4f;
-  background-image: url('../assets/images/yoshiback.png');
-  background-position: top;
-  background-size: cover;
-  box-shadow: 10px 10px 10px black;
-}
-.spin {
-  font-family: 'Mario';
-  font-size: 60px;
-}
+
+
 .spinbutton {
-  background-color: #d84b4b;
-  height: 70px;
-  width: 500px;
-  margin: 0px 100px;
+  background: linear-gradient(#e55147, #ce4339);
+  height: 100px;
+  width: 80%;
+  margin-left: 10%;
   border: 5px outset;
   font-size: 24px;
   font-family: 'Mario';
 }
-#spinbuttonbox {
-  margin-left: 450px;
-  margin-right: 400px;
-}
+
 #reset {
-  background-color: #dbc72e;
-  height: 75px;
+  background: linear-gradient(#eddd31, #d1c329);
+  height: 14%;
   width: 150px;
   float: right;
   border: 5px outset;
@@ -1198,39 +1290,34 @@ button:focus {
   font-family: 'Mario';
   font-size: 13px;
 }
-.siren {
-  float: left;
-  margin-left: 500px;
-}
-.everything {
-  margin: auto;
-}
+
+
 .slotprizes {
   float: left;
-  border: 2px solid white;
+  margin: 10px auto auto 10px;
+  /*border: 2px solid white;*/
+}
+
+.slotprizes td {
+  background-color: #282828;
+  font-family: 'Mario';
+  font-size: 13px;
+  color: white;
+  border: 2px inset;
 }
 .slotprizes td {
-  background-color: tomato;
-  font-family: 'Mario';
-  font-size: 15px;
-  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .slotprizes img {
   padding-left: 5px;
   padding-top: 5px;
 }
-.yoshiwin {
-  float: left;
-  margin-left: 300px;
-  margin-right: 50px;
-}
+
 th {
   background-color: #d1d3d1;
 }
-#yoshi {
-  float: left;
-  margin: 100px 40px auto 80px;
-}
+
 
 /* ------------------- BOWSER PAGE ------------------- */
 #bowser-page {

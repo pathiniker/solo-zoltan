@@ -15,7 +15,6 @@ function PlayerService($http){
     return $http.get('/players', allPlayers)
           .then(function(response){
             return response.data;
-
     });
   };
 
