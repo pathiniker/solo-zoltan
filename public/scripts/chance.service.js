@@ -38,8 +38,8 @@ function ChanceService($http){
       });
   };
 
-  this.insertCoin = function(newAmount){
-    return $http.put('/jackpot', {amount:newAmount})
+  this.insertCoin = function(newAmount, newCount){
+    return $http.put('/jackpot', {amount:newAmount, starcount:newCount})
         .then(function(response){
           return response.data;
         });

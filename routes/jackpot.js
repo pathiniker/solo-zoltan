@@ -33,6 +33,7 @@ router.get('/', function(req, res){
 router.put('/', function(req, res){
 console.log('READING JACKPOT UPDATE', req.body);
 var amount = req.body.amount;
+var starcount = req.body.starcount;
 var id = req.params.id;
 // console.log(amount);
 
@@ -45,8 +46,8 @@ var id = req.params.id;
             return;
         }
 
-    client.query('UPDATE jackpot SET amount = $1 RETURNING *;',
-        [amount], function(err, result){
+    client.query('UPDATE jackpot SET amount = $1, starcount = $2 RETURNING *;',
+        [amount, starcount], function(err, result){
             if(err){
             console.log('Error querying database',err);
             res.sendStatus(500);

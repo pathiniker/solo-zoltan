@@ -10,7 +10,9 @@
 
 <!-- === NEW SLOT MACHINE === -->
 <div id="jackpot-display">
-  <p>Jackpot:</p><p>{{slot.jackpotArray[0].amount}}</p>
+  <p>Jackpot:</p><p ng-if="slot.jackpotArray[0].starcount">{{slot.jackpotArray[0].starcount}}<img ng-if="slot.jackpotStar" ng-src="{{slot.jackpotStar}}" height="50px"/></p>
+  <p>
+   {{slot.jackpotArray[0].amount}}<img src="../assets/images/coin.png" height="50px"></p>
 </div>
 <div class="slot-machine">
 <button id="reset" ng-click="slot.insertCoin()">Insert coin</button>
@@ -40,7 +42,7 @@
   </tr>
   <tr>
     <td>Payout</td>
-    <td>{{slot.payout}}</td>
+    <td id="{{slot.payoutStatus}}">{{slot.payout}}</td>
   </tr>
   <tr>
     <td>Result</td>

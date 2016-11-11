@@ -19,7 +19,10 @@ var slot = this;
 
   slot.spins = 0;
   slot.payout = 0;
+  slot.payoutStatus = '';
+  slot.jackpotStar = '';
 
+  slot.star = '../assets/images/star.png';
 
   slot.getSlot = function(allSlots){
     chanceService.getSlot(allSlots)
@@ -40,11 +43,13 @@ var slot = this;
   slot.getJackpot();
 
 
+
+
   slot.insertCoin = function(){
       if (slot.spins >= 1) {
         alert("You've still got spins!");
       } else if (slot.spins == 0){
-        chanceService.insertCoin(slot.jackpotArray[0].amount + 1)
+        chanceService.insertCoin(slot.jackpotArray[0].amount + 1, slot.jackpotArray[0].starcount)
           .then(function() {
             slot.spins = 3;
             slot.spinResult = '';
@@ -54,11 +59,30 @@ var slot = this;
             slot.payout--;
             slot.jackpotArray[0].amount++;
 
-            console.log(slot.jackpotArray[0].amount);
+            console.log('Coins:', slot.jackpotArray[0].amount);
+            console.log('Stars:', slot.jackpotArray[0].starcount);
+
+
+                      if (slot.payout < 0) {
+                        slot.payoutStatus = 'negative';
+                      } else if (slot.payout > 0) {
+                        slot.payoutStatus = 'positive';
+                      } else {
+                        slot.payoutStatus = '';
+                      }
+
+              if (slot.jackpotArray[0].amount >= 10){
+                  slot.jackpotArray[0].starcount++;
+                  slot.jackpotArray[0].amount = (slot.jackpotArray[0].amount - 10);
+                }
+              if (slot.jackpotArray[0].starcount > 0){
+                slot.jackpotStar = slot.star;
+              }
+
+
+
           });
 
-          // slot.jackpotArray[0].amount = response;
-          // slot.getJackpot();
 
         } // end else if
 
@@ -91,7 +115,18 @@ var slot = this;
       slot.spins = 0;
       slot.payout = slot.payout + slot.jackpotArray[0].amount;
       slot.jackpotArray[0].amount = 3;
+      slot.jackpotStar = '';
+      slot.jackpotArray[0].starcount = 0;
     }
+
+
+      if (slot.payout < 0) {
+        slot.payoutStatus = 'negative';
+      } else if (slot.payout > 0) {
+        slot.payoutStatus = 'positive';
+      } else {
+        slot.payoutStatus = '';
+      }
 
     } // end else if
 

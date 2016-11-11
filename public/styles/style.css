@@ -1189,6 +1189,12 @@ button:focus {
   float: left;
   width: 70%;
 }
+#negative {
+  color: #e55147;
+}
+#positive {
+  color: #80e23b;
+}
 #jackpot-display {
   margin: auto;
   margin-top: 3%;
@@ -1213,8 +1219,18 @@ button:focus {
   font-size: 65px;
   color: #ef584a;
 }
-#jackpot-display p:nth-child(2){
-  width: 50%;
+#jackpot-display p:nth-child(2) {
+  width: 25%;
+  float: left;
+  font-size: 65px;
+  color: white;
+}
+#jackpot-display p:nth-child(2) img {
+  margin: 0;
+  padding: 0;
+}
+#jackpot-display p:nth-child(3){
+  width: 25%;
   float: left;
   font-size: 65px;
   color: white;
