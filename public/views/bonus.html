@@ -1,0 +1,48 @@
+<div class="content" id="bonus-page">
+<br /><br />
+<div id="bonus-stars" ng-controller="BonusController as bonus">
+<h2>Bonus Stars</h2><br />
+
+<button ng-click="bonus.pickOne()">Bonus Star 1</button>{{bonus.starOne}}<br />
+
+<button ng-click="bonus.pickTwo()">Bonus Star 2</button>{{bonus.starTwo}}<br />
+
+<button ng-click="bonus.pickThree()">Bonus Star 3</button>{{bonus.starThree}}
+
+
+<br /><button id="to-winner"><a href="/winner">Winner</a></button>
+
+</div>
+<div id="standings-all">
+
+
+<div class="standings-each" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins']">
+<img src="{{player.character}}" />
+<div class="standings-box">
+<h2>{{player.name}}</h2><br />
+<!-- <p class="standings-info"><img src="../assets/images/star.png" />{{player.stars}}</p><br />
+<p class="standings-info"><img src="../assets/images/coin.png" />{{player.coins}}</p> -->
+
+</div>
+</div>
+
+<!-- <div class="standings-each" id="standings-two">
+<div class="standings-box"></div>
+</div>
+
+<div class="standings-each" id="standings-three">
+<div class="standings-box"></div>
+</div>
+
+<div class="standings-each" id="standings-four">
+<div class="standings-box"></div>
+</div> -->
+
+
+
+</div>
+
+
+
+
+</div>

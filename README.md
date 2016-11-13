@@ -94,3 +94,15 @@
   - Jackpot amount stores in SQL
   - Bowser slot machine fully functioning in Angular
   - ALL jQUERY OFFICIALLY CONVERTED TO ANGULAR SON
+
+- [Thurs 11/10]
+  - Making pages scalable via % widths
+
+- [Fri 11/11]
+  - Finished optimizing pages
+  - Added "star" feature to slot machine
+  - IT'S DONE, MOSTLY?!
+
+- [Sat 11/12]
+  - Added Winner page
+  - Added Bonus Stars page

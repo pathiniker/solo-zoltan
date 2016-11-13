@@ -79,8 +79,6 @@ var slot = this;
                 slot.jackpotStar = slot.star;
               }
 
-
-
           });
 
 

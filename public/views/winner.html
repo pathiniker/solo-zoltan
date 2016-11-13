@@ -1,0 +1,19 @@
+<div class="content" id="winner-page">
+  <h1>You are the Winner!</h1>
+
+<div id="winner-box" ng-repeat="player in player.playersArray | orderBy:['-stars', '-coins'] | limitTo: 1">
+  <div id="winner-left">
+    <img ng-src="{{player.character}}" />
+
+  </div>
+  <div id="winner-right">
+    <p id="winner-name">{{player.name}}</p>
+    <p id="winner-amount"> <img src="../assets/images/star.png" /> {{player.stars}}</p>
+    <p id="winner-amount"> <img src="../assets/images/coin.png" /> {{player.coins}}</p>
+  </div>
+
+
+
+</div>
+
+</div>

@@ -1410,3 +1410,124 @@ th {
 #bowser-player img {
   height: 180px;
 }
+
+/* ------------------- WINNER PAGE ------------------- */
+#winner-page {
+  background-image: url('../assets/images/galaxy.jpg');
+  background-size: cover;
+  background-position: center;
+}
+#winner-page h1 {
+  color: white;
+  margin: 0;
+  padding: 0;
+
+}
+#winner-left {
+  float: left;
+  width: 50%;
+}
+#winner-right {
+  float: left;
+  width: 50%;
+}
+#winner-box {
+  width: 80%;
+  margin-left: 10%;
+}
+#winner-box img {
+  height: 600px;
+  margin-left: 20%;
+}
+#winner-box p {
+  text-align: center;
+  color: white;
+}
+#winner-name {
+  color: blue;
+  font-size: 50px;
+}
+#winner-amount {
+  font-size: 35px;
+
+}
+#winner-amount img {
+  height: 100px;
+}
+
+
+/* ------------------- BONUS PAGE ------------------- */
+#bonus-page {
+  background-image: url('../assets/images/castle.jpg');
+  background-size: cover;
+  background-position: center -300px;
+
+  height: 1200px;
+}
+#bonus-page h2 {
+  color: black;
+}
+#standings-all {
+  margin-top: 15%;
+  margin-left: 20%;
+  width: 80%;
+}
+#bonus-stars {
+  float: left;
+}
+.standings-box {
+  background-image: url('../assets/images/blocktexture.gif');
+  width: 100%;
+  height: 250px;
+  float: left;
+  border-left: 10px solid black;
+  border-right: 10px solid black;
+  border-top: 10px solid black;
+}
+.standings-box h2 {
+  color: white;
+  background-color: lightblue;
+  width: 90%;
+  margin: 30px auto;
+}
+.standings-each {
+  float: left;
+  width: 20%;
+}
+.standings-each img {
+  height: 400px;
+  margin-left: 10%;
+  margin-bottom: 120px;
+}
+.standings-info {
+  font-family: 'Mario';
+  color: white;
+  text-align: center;
+}
+.standings-info img {
+  height: 50px;
+  display: inline;
+}
+#standings-name {
+  font-size: 25px;
+}
+#standings-all div:nth-child(1) {
+  margin-top: -250px;
+}
+#standings-all div:nth-child(1) div{
+  height: 500px;
+}
+
+#standings-all div:nth-child(2) {
+  margin-top: -150px;
+}
+#standings-all div:nth-child(2) div{
+  height: 400px;
+}
+
+#standings-all div:nth-child(3) {
+  margin-top: -50px;
+}
+#standings-all div:nth-child(3) div{
+  height: 300px;
+}
