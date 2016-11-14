@@ -7,8 +7,6 @@
 
     <script src="vendors/angular.min.js" charset="utf-8"></script>
     <script src="vendors/angular-route.min.js" charset="utf-8"></script>
-    <!-- <script src="vendors/jquery.min.js"></script> -->
-    <!-- <script src="scripts/app.js"></script> -->
 
     <script src="scripts/app.module.js" charset="utf-8"></script>
     <script src="scripts/app.config.js" charset="utf-8"></script>
@@ -29,7 +27,6 @@
     <script src="scripts/bonus.controller.js"></script>
 
 
-    <!-- <link rel="stylesheet" href="vendors/bootstrap.min.css" /> -->
     <link rel="stylesheet" href="styles/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon.ico" />
 
@@ -122,12 +119,9 @@
   <div id="game-turn">
   <label for="turn-count">Turns remaining:</label><br />
   <input type="number" ng-model="turn.turnsArray[0].turn_num" />
-  <!-- <input type="number" ng-model="player.playersArray[0].minigame + player.playersArray[1].minigame + player.playersArray[2].minigame + player.playersArray[3].minigame + 1" /> -->
+</div>
 
-<!-- {{player.playersArray[0].minigame + player.playersArray[1].minigame + player.playersArray[2].minigame + player.playersArray[3].minigame + 1}} -->
-    </div>
-
-  <button id="next-player" ng-click="player.updateCounter(player.playersArray); turn.updateTurn(turn.turnsArray)">Save</button>
+<button id="next-player" ng-click="player.updateCounter(player.playersArray); turn.updateTurn(turn.turnsArray)">Save</button>
 </div>
 </form>
 
@@ -150,7 +144,7 @@
 
 </div> <!-- end CURRENT TURN -->
 
-  </div> <!-- end COUNTER BOX -->
+</div> <!-- end COUNTER BOX -->
 
 </div> <!-- end STATIC -->
 

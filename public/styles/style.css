@@ -1005,12 +1005,12 @@ button:focus {
 }
 .candies td:nth-child(2){
   font-size: 30px;
-  border-radius: 15px;
+  border-radius: 60px;
   background: linear-gradient(#ededed, #cccccc);
 }
 .candies td:nth-child(3){
   font-size: 40px;
-  border-radius: 15px;
+  border-radius: 60px;
   font-family: 'Mario';
   min-width: 150px;
 }

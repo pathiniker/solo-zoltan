@@ -9,6 +9,7 @@ player.luigi = '../assets/images/luigi.png';
 player.peach = '../assets/images/peach.png';
 player.toad = '../assets/images/toadplayer.png';
 player.koopa = '../assets/images/koopa.png';
+player.dk = '../assets/images/dk.png';
 
 
   player.playersArray = [];

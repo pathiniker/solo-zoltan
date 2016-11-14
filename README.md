@@ -2,17 +2,16 @@
 
 ## Priorities -----
 
-- Convert jQuery logic into Angular Controllers
+- Convert jQuery logic into Angular Controllers [COMPLETED]
 
 - Create 2+ new Special Spaces
 
-- Overhaul mini-game page
-  - Display game box cover image
+- Overhaul mini-game page [COMPLETED]
+  - Display game box cover image [COMPLETED]
   - Multiple pages, walk-through
 
 - Rewrite and consolidate CSS
   - Create separate styling pages?
-  - 40%
 
 - Background music
   - Change song from footer
@@ -44,7 +43,6 @@
 - Node / Express
 - Angular
 - SQL
-- jQuery
 
 
 ## Log ------------

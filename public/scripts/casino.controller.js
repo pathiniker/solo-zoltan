@@ -19,10 +19,11 @@ var slot = this;
 
   slot.spins = 0;
   slot.payout = 0;
+  slot.payoutStar = 0;
   slot.payoutStatus = '';
   slot.jackpotStar = '';
 
-  slot.star = '../assets/images/star.png';
+  slot.star = '../assets/images/8star.png';
 
   slot.getSlot = function(allSlots){
     chanceService.getSlot(allSlots)
@@ -35,7 +36,6 @@ var slot = this;
     chanceService.getJackpot(defJackpot)
       .then(function(response){
         slot.jackpotArray = response;
-        console.log(response);
       });
   } // end getSlot
 
@@ -77,6 +77,7 @@ var slot = this;
                 }
               if (slot.jackpotArray[0].starcount > 0){
                 slot.jackpotStar = slot.star;
+
               }
 
           });
@@ -105,14 +106,15 @@ var slot = this;
       slot.spins = 0;
       slot.payout = slot.payout + 1;
     } else if (slot.resOne.number === slot.resTwo.number && slot.resOne.number === slot.resThree.number && (slot.resOne.number + slot.resTwo.number + slot.resThree.number) === 6){
-      slot.spinResult = '+2';
+      slot.spinResult = '+3';
       slot.spins = 0;
-      slot.payout = slot.payout + 2;
+      slot.payout = slot.payout + 3;
     } else if (slot.resOne.number === slot.resTwo.number && slot.resOne.number === slot.resThree.number && (slot.resOne.number + slot.resTwo.number + slot.resThree.number) === 9){
       slot.spinResult = 'Jackpot';
       slot.spins = 0;
+      slot.payoutStar += slot.jackpotArray[0].starcount;
       slot.payout = slot.payout + slot.jackpotArray[0].amount;
-      slot.jackpotArray[0].amount = 3;
+      slot.jackpotArray[0].amount = 5;
       slot.jackpotStar = '';
       slot.jackpotArray[0].starcount = 0;
     }
@@ -125,6 +127,8 @@ var slot = this;
       } else {
         slot.payoutStatus = '';
       }
+
+
 
     } // end else if
 

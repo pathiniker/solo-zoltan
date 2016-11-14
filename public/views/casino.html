@@ -12,7 +12,7 @@
 <div id="jackpot-display">
   <p>Jackpot:</p><p ng-if="slot.jackpotArray[0].starcount">{{slot.jackpotArray[0].starcount}}<img ng-if="slot.jackpotStar" ng-src="{{slot.jackpotStar}}" height="50px"/></p>
   <p>
-   {{slot.jackpotArray[0].amount}}<img src="../assets/images/coin.png" height="50px"></p>
+   {{slot.jackpotArray[0].amount}}<img src="../assets/images/8coin.png" height="50px"></p>
 </div>
 <div class="slot-machine">
 <button id="reset" ng-click="slot.insertCoin()">Insert coin</button>
@@ -25,7 +25,7 @@
     </tr>
     <tr>
       <td><img src="../assets/images/yoshiegg.png" height="25px"><img src="../assets/images/yoshiegg.png" height="25px"><img src="../assets/images/yoshiegg.png" height="25px"></td>
-      <td><img src="../assets/images/coin.png" height="25px"><img src="../assets/images/coin.png" height="25px"></td>
+      <td><img src="../assets/images/coin.png" height="25px"><img src="../assets/images/coin.png" height="25px"><img src="../assets/images/coin.png" height="25px"></td>
     </tr>
     <tr>
       <td><img src="../assets/images/mushroom.png" height="25px"><img src="../assets/images/mushroom.png" height="25px"><img src="../assets/images/mushroom.png" height="25px"></td>
@@ -42,7 +42,7 @@
   </tr>
   <tr>
     <td>Payout</td>
-    <td id="{{slot.payoutStatus}}">{{slot.payout}}</td>
+    <td id="{{slot.payoutStatus}}">{{slot.payout}}<img src="../assets/images/8coin.png" height="30px">&nbsp;<span ng-if="slot.payoutStar" id="positive">{{slot.payoutStar}} <img ng-src="../assets/images/8star.png" height="30px" /></span></td>
   </tr>
   <tr>
     <td>Result</td>
