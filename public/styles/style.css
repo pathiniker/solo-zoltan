@@ -123,7 +123,7 @@ a:focus {
 }
 /* ------------------- PAGES ------------------- */
 #pages-box {
-  width: 33%;
+  width: 25%;
   background: linear-gradient(#73dddc, #4ba8a6);
   height: 100%;
   float: left;
@@ -149,7 +149,7 @@ a:focus {
 
 /* ------------------- COUNTER ------------------- */
 #counter-box {
-  width: 67%;
+  width: 75%;
   background: linear-gradient(#32c188, #5fe8b1);
   height: 100%;
   float: left;
@@ -279,7 +279,7 @@ button:focus {
 /* ------------------- CURRENT TURN ------------------- */
 #current-turn {
   height: 100%;
-  width: 47%;
+  width: 40%;
   background-color: white;
   float: right;
   /*margin: 5px;*/
@@ -1128,6 +1128,19 @@ button:focus {
     padding: 15px;
     background-color: white;
 }
+#candy-table {
+  background: none;
+  border: none;
+  margin-top: 50px;
+}
+#candy-table img {
+  height: 40px;
+}
+#candy-table td {
+  height: 100px;
+}
+
+
 #blue {
   background-color: #3e66dd;
 }
@@ -1530,4 +1543,95 @@ th {
 }
 #standings-all div:nth-child(3) div{
   height: 300px;
+}
+
+
+/* ------------------- BANK PAGE ------------------- */
+#bank-page {
+  background: linear-gradient(to bottom right, #1d42c6, white, #bc1010);
+
+}
+#bank-page h2 {
+  font-family: Impact;
+  font-size: 60px;
+  margin-top: 0;
+  margin-bottom: auto;
+}
+
+#bank-page h3 {
+  font-family: Impact;
+  margin-bottom: 0;
+  margin-top: 15%;
+  color: #282828;
+  font-size: 40px;
+  background-color: white;
+  width: 60%;
+  margin-left: 20%;
+  border-radius: 15px 15px 0 0;
+}
+.bank-col-1 {
+  width: 35%;
+  height: 1080px;
+  float: left;
+}
+.bank-col-1 img {
+  margin: auto;
+  width: 70%;
+  margin-left: 20%;
+  margin-top: 15%;
+}
+.bank-col-2 {
+  width: 65%;
+  float: left;
+}
+
+#bank-container {
+  background: linear-gradient(#414244, #57585b);
+  width: 70%;
+  height: 600px;
+  margin-left: 15%;
+  margin-top: 10%;
+  border-radius: 20px;
+  border: 10px inset;
+}
+.bankcon-col-1 {
+  width: 50%;
+  float: left;
+}
+.bankcon-col-1 img {
+  width: 40%;
+  margin-bottom: 4%;
+}
+#bank-balance {
+  width: 80%;
+  height: 230px;
+  background-color: #333333;
+  margin-left: 10%;
+  border-radius: 15px;
+  border: 5px inset;
+  font-family: 'Balls';
+  font-size: 250px;
+  text-align: center;
+  color: #567bff;
+}
+.bankcon-col-2 {
+  width: 50%;
+  float: left;
+}
+.bank-btn {
+  width: 70%;
+  height: 120px;
+  margin-top: 15%;
+  margin-left: 15%;
+  font-family: 'Mario';
+  border-radius: 15px;
+  border: 5px outset;
+  font-family: Impact;
+  font-size: 50px;
+}
+#up {
+  background: linear-gradient(#c44848, #9b3333);
+}
+#down {
+  background: linear-gradient(#5caf38, #4a912b);
 }

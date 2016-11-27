@@ -9,6 +9,7 @@ var ffa = require('./routes/ffa');
 var two = require('./routes/two');
 var slots = require('./routes/slots');
 var jackpot = require('./routes/jackpot');
+var bankBalance = require('./routes/bankBalance');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -22,6 +23,7 @@ app.use('/ffa', ffa);
 app.use('/two', two);
 app.use('/slots', slots);
 app.use('/jackpot', jackpot);
+app.use('/bankBalance', bankBalance);
 
 app.get('/*', function(req, res){
   res.sendFile(path.join(__dirname, 'public/views/index.html'));

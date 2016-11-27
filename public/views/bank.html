@@ -1,0 +1,20 @@
+<div class="content" id="bank-page">
+  <div class="bank-col-1">
+    <img src="../assets/images/goomba.png" />
+  </div>
+  <div class="bank-col-2">
+    <div id="bank-container">
+      <h2>1<sup>st</sup> American Bank of Dick</h2>
+      <div class="bankcon-col-1">
+        <h3>Balance: </h3>
+        <div id="bank-balance">
+          {{bank.balanceArray[0].balance}}<img src="../assets/images/8coin.png" />
+        </div>
+      </div>
+      <div class="bankcon-col-2">
+        <button class="bank-btn" id="up" ng-click="bank.increase()">Pay Up</button>
+        <button class="bank-btn" id="down" ng-click="bank.reset()">Drain</button>
+      </div>
+    </div>
+  </div>
+</div>

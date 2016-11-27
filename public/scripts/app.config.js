@@ -37,6 +37,9 @@ angular.module('routeApp')
           }).when('/winner', {
             templateUrl: '/views/winner.html',
             controller: 'PlayerController as player',
+          }).when('/bank', {
+            templateUrl: '/views/bank.html',
+            controller: 'BankController as bank',
           }).otherwise({
             redirectTo: '/home',
           });

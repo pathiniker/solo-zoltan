@@ -45,6 +45,27 @@ function ChanceService($http){
         });
   };
 
+  this.getBalance = function(bankBalance){
+    return $http.get('/bankBalance', bankBalance)
+      .then(function(response){
+        return response.data;
+      });
+  };
+
+  this.increase = function(newBalance){
+    return $http.put('/bankBalance', {balance:newBalance})
+      .then(function(response){
+        return response.data;
+      });
+  };
+
+  this.reset = function(newBalance){
+    return $http.put('/bankBalance', {balance:newBalance})
+      .then(function(response){
+        return response.data;
+      });
+  };
+
 
 
 
