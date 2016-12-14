@@ -1637,3 +1637,42 @@ th {
 #down {
   background: linear-gradient(#5caf38, #4a912b);
 }
+
+
+/* ------------------- BOARD PAGE ------------------- */
+.board-space {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 2px;
+}
+
+.board-row {
+  /*float: left;*/
+  display: inline-block;
+}
+.board-col {
+  display: block;
+}
+
+.whole-row {
+  float: left;
+}
+.whole-col {
+  float: left;
+}
+
+.whole-col-up {
+  float: left;
+}
+
+.board-roll {
+  float: right;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#playerOne {
+  border: 2px solid yellow;
+}

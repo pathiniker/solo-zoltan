@@ -1,0 +1,38 @@
+<div class="content">
+
+<p class="board-roll">
+  <button ng-click="board.rollDice()">Roll Dice</button>{{board.rollResult}}
+</p>
+
+<div class="whole-row">
+  <div ng-repeat="board in board.rowOne" class="board-space board-row" id="{{board.playerLocation}}" style="background-color:{{board.color}};">
+  </div>
+</div>
+
+<div class="whole-col">
+  <div ng-repeat="board in board.colOne" class="board-space board-col" id="{{board.playerLocation}}" style="background-color:{{board.color}};">
+  </div>
+
+  <div class="whole-row">
+    <div class="whole-col">
+      <div ng-repeat="board in board.colThree" class="board-space board-col" id="{{board.playerLocation}}" style="background-color:{{board.color}};">
+      </div>
+
+    </div>
+    <div ng-repeat="board in board.rowTwo" class="board-space board-row" style="background-color:{{board.color}};">
+    </div>
+  </div>
+
+  <div class="whole-col">
+    <div ng-repeat="board in board.colTwo" class="board-space board-col" style="background-color:{{board.color}};">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>

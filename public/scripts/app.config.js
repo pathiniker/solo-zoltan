@@ -40,6 +40,9 @@ angular.module('routeApp')
           }).when('/bank', {
             templateUrl: '/views/bank.html',
             controller: 'BankController as bank',
+          }).when('/board', {
+            templateUrl: '/views/board.html',
+            controller: 'BoardController as board',
           }).otherwise({
             redirectTo: '/home',
           });
